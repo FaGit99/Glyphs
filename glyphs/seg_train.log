@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+epoch 1/20 loss 0.7221  val(ISIC cal) Dice 0.851 IoU 0.767  10s
+epoch 2/20 loss 0.3987  val(ISIC cal) Dice 0.894 IoU 0.821  19s
+epoch 3/20 loss 0.2406  val(ISIC cal) Dice 0.899 IoU 0.832  28s
+epoch 4/20 loss 0.1982  val(ISIC cal) Dice 0.911 IoU 0.846  37s
+epoch 5/20 loss 0.1698  val(ISIC cal) Dice 0.906 IoU 0.839  46s
+epoch 6/20 loss 0.1584  val(ISIC cal) Dice 0.902 IoU 0.838  55s
+epoch 7/20 loss 0.1481  val(ISIC cal) Dice 0.910 IoU 0.846  63s
+epoch 8/20 loss 0.1409  val(ISIC cal) Dice 0.907 IoU 0.844  72s
+epoch 9/20 loss 0.1340  val(ISIC cal) Dice 0.905 IoU 0.844  81s
+epoch 10/20 loss 0.1304  val(ISIC cal) Dice 0.909 IoU 0.846  90s
+epoch 11/20 loss 0.1229  val(ISIC cal) Dice 0.911 IoU 0.848  99s
+epoch 12/20 loss 0.1151  val(ISIC cal) Dice 0.907 IoU 0.844  108s
+epoch 13/20 loss 0.1123  val(ISIC cal) Dice 0.909 IoU 0.847  116s
+epoch 14/20 loss 0.1079  val(ISIC cal) Dice 0.908 IoU 0.845  124s
+epoch 15/20 loss 0.1046  val(ISIC cal) Dice 0.910 IoU 0.848  133s
+epoch 16/20 loss 0.0995  val(ISIC cal) Dice 0.911 IoU 0.849  142s
+epoch 17/20 loss 0.0973  val(ISIC cal) Dice 0.909 IoU 0.847  150s
+epoch 18/20 loss 0.0957  val(ISIC cal) Dice 0.909 IoU 0.848  159s
+epoch 19/20 loss 0.0950  val(ISIC cal) Dice 0.911 IoU 0.849  167s
+epoch 20/20 loss 0.0941  val(ISIC cal) Dice 0.910 IoU 0.849  175s

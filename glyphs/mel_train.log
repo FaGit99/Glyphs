@@ -1,0 +1,45 @@
+step 100/800 loss 0.616 (d7 0.507)  12s
+step 200/800 loss 0.509 (d7 0.423)  23s
+step 300/800 loss 0.261 (d7 0.164)  35s
+step 400/800 loss 0.178 (d7 0.095)  47s
+step 500/800 loss 0.152 (d7 0.079)  59s
+step 600/800 loss 0.134 (d7 0.057)  71s
+step 700/800 loss 0.117 (d7 0.034)  83s
+step 800/800 loss 0.156 (d7 0.081)  95s
+mel_fold1: held-out 123 images; 7-point-channel AUC mean 0.895: network_any:0.94, network_atypical:0.91, streaks_any:0.91, streaks_irregular:0.89, dots_any:0.87, dots_irregular:0.90, veil:0.89, regression_any:0.80, pigmentation_irregular:0.83, vessels_dotted:0.79, vessels_hairpin:nan, vessels_linear_irregular:0.97, vessels_comma:0.97, vessels_arborizing:0.96
+step 100/800 loss 0.718 (d7 0.620)  11s
+step 200/800 loss 0.464 (d7 0.386)  23s
+step 300/800 loss 0.225 (d7 0.138)  35s
+step 400/800 loss 0.283 (d7 0.187)  46s
+step 500/800 loss 0.130 (d7 0.057)  57s
+step 600/800 loss 0.109 (d7 0.036)  68s
+step 700/800 loss 0.121 (d7 0.042)  80s
+step 800/800 loss 0.146 (d7 0.046)  92s
+mel_fold2: held-out 123 images; 7-point-channel AUC mean 0.871: network_any:0.97, network_atypical:0.87, streaks_any:0.93, streaks_irregular:0.92, dots_any:0.88, dots_irregular:0.88, veil:0.94, regression_any:0.90, pigmentation_irregular:0.86, vessels_dotted:0.80, vessels_hairpin:0.38, vessels_linear_irregular:nan, vessels_comma:1.00, vessels_arborizing:0.99
+step 100/800 loss 0.568 (d7 0.479)  13s
+step 200/800 loss 0.456 (d7 0.356)  25s
+step 300/800 loss 0.344 (d7 0.244)  37s
+step 400/800 loss 0.304 (d7 0.219)  50s
+step 500/800 loss 0.215 (d7 0.120)  62s
+step 600/800 loss 0.126 (d7 0.054)  74s
+step 700/800 loss 0.131 (d7 0.050)  86s
+step 800/800 loss 0.144 (d7 0.059)  96s
+mel_fold3: held-out 123 images; 7-point-channel AUC mean 0.847: network_any:0.95, network_atypical:0.91, streaks_any:0.90, streaks_irregular:0.90, dots_any:0.81, dots_irregular:0.83, veil:0.88, regression_any:0.86, pigmentation_irregular:0.85, vessels_dotted:0.81, vessels_hairpin:0.72, vessels_linear_irregular:0.97, vessels_comma:nan, vessels_arborizing:0.61
+step 100/800 loss 0.478 (d7 0.381)  13s
+step 200/800 loss 0.356 (d7 0.248)  26s
+step 300/800 loss 0.360 (d7 0.269)  38s
+step 400/800 loss 0.206 (d7 0.125)  50s
+step 500/800 loss 0.128 (d7 0.050)  63s
+step 600/800 loss 0.149 (d7 0.067)  74s
+step 700/800 loss 0.116 (d7 0.050)  86s
+step 800/800 loss 0.127 (d7 0.046)  96s
+mel_fold4: held-out 123 images; 7-point-channel AUC mean 0.903: network_any:0.92, network_atypical:0.88, streaks_any:0.91, streaks_irregular:0.89, dots_any:0.89, dots_irregular:0.87, veil:0.92, regression_any:0.82, pigmentation_irregular:0.87, vessels_dotted:0.88, vessels_hairpin:0.88, vessels_linear_irregular:0.97, vessels_comma:0.99, vessels_arborizing:0.95
+step 100/800 loss 0.704 (d7 0.612)  12s
+step 200/800 loss 0.579 (d7 0.480)  22s
+step 300/800 loss 0.316 (d7 0.219)  33s
+step 400/800 loss 0.230 (d7 0.131)  44s
+step 500/800 loss 0.275 (d7 0.189)  55s
+step 600/800 loss 0.169 (d7 0.087)  65s
+step 700/800 loss 0.152 (d7 0.078)  76s
+step 800/800 loss 0.149 (d7 0.053)  87s
+mel_final: held-out 395 images; 7-point-channel AUC mean 0.903: network_any:0.95, network_atypical:0.90, streaks_any:0.90, streaks_irregular:0.85, dots_any:0.89, dots_irregular:0.88, veil:0.96, regression_any:0.87, pigmentation_irregular:0.87, vessels_dotted:0.85, vessels_hairpin:0.94, vessels_linear_irregular:0.86, vessels_comma:0.95, vessels_arborizing:0.96

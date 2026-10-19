@@ -1,0 +1,2 @@
+val: 1600 images in 39s; labels/img 2.74; IDs with <30 positives: 4
+train: 16000 images in 238s; labels/img 2.79; IDs with <30 positives: 4

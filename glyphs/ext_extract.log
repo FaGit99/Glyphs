@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HAM10000: 1987 images {'MEL': 500, 'NV': 800, 'BCC': 200, 'BKL': 200, 'AKIEC': 162, 'DF': 57, 'VASC': 68, 'OTHER': 0}
+  500/1987 12s
+  1000/1987 23s
+  1500/1987 34s
+  done 45s, skipped 0
+BCN20000: 2419 images {'MEL': 500, 'NV': 800, 'BCC': 200, 'BKL': 200, 'AKIEC': 200, 'DF': 168, 'VASC': 151, 'OTHER': 200}
+  500/2419 12s
+  1000/2419 22s
+  1500/2419 33s
+  2000/2419 44s
+  done 53s, skipped 0
+ISIC2019 (MSK etc.): 1388 images {'MEL': 388, 'NV': 800, 'BCC': 0, 'BKL': 200, 'AKIEC': 0, 'DF': 0, 'VASC': 0, 'OTHER': 0}
+  500/1388 12s
+  1000/1388 22s
+  done 30s, skipped 0
+ISIC2020: 1500 images {'MEL': 500, 'NV': 800, 'BCC': 0, 'BKL': 0, 'AKIEC': 0, 'DF': 0, 'VASC': 0, 'OTHER': 200}
+  500/1500 12s
+  1000/1500 23s
+  1500/1500 34s
+  done 34s, skipped 0

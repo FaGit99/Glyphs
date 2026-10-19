@@ -1,0 +1,9 @@
+100/395 32s
+200/395 60s
+300/395 88s
+
+analyze.py on Derm7pt test (101 melanomas / 395):
+  melanoma AUC, expected points (displayed)              0.883 [0.84-0.91]
+  melanoma AUC, points at >=50 % criteria (displayed)    0.851 [0.81-0.89]
+  mean displayed expected score 2.32 vs mean true checklist score 2.27; correlation 0.79
+  rule 'points >= 3': sensitivity 0.71, specificity 0.83

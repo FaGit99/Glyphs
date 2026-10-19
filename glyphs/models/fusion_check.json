@@ -1,0 +1,105 @@
+{
+ "T1 melanoma vs nevus": {
+  "BCN20000": {
+   "R rule (no training)": 0.7204225,
+   "G probe glyphs": 0.7146224999999999,
+   "I probe ImageNet": 0.6589975,
+   "C1 concat probe": 0.6385175000000001,
+   "F1 z(G)+z(I)": 0.706945,
+   "F2 stacked LR": 0.7147925,
+   "F3 z(R)+z(I)": 0.7044875
+  },
+  "HAM10000": {
+   "R rule (no training)": 0.8144399999999999,
+   "G probe glyphs": 0.803515,
+   "I probe ImageNet": 0.6029724999999999,
+   "C1 concat probe": 0.58661,
+   "F1 z(G)+z(I)": 0.7290699999999999,
+   "F2 stacked LR": 0.763645,
+   "F3 z(R)+z(I)": 0.7238
+  },
+  "ISIC2019": {
+   "R rule (no training)": 0.7532957474226805,
+   "G probe glyphs": 0.7434600515463918,
+   "I probe ImageNet": 0.7547680412371134,
+   "C1 concat probe": 0.7589368556701032,
+   "F1 z(G)+z(I)": 0.7798067010309278,
+   "F2 stacked LR": 0.7794362113402061,
+   "F3 z(R)+z(I)": 0.7801643041237112
+  },
+  "ISIC2020": {
+   "R rule (no training)": 0.6831125,
+   "G probe glyphs": 0.6852550000000001,
+   "I probe ImageNet": 0.72003,
+   "C1 concat probe": 0.6582724999999999,
+   "F1 z(G)+z(I)": 0.7330975,
+   "F2 stacked LR": 0.7254475000000001,
+   "F3 z(R)+z(I)": 0.730745
+  },
+  "pooled": {
+   "R rule (no training)": 0.7413049523305085,
+   "G probe glyphs": 0.7361554886122882,
+   "I probe ImageNet": 0.680366955773305,
+   "C1 concat probe": 0.6570204912605933,
+   "F1 z(G)+z(I)": 0.7354167770127118,
+   "F2 stacked LR": 0.744102390095339,
+   "F3 z(R)+z(I)": 0.7329039492849576
+  }
+ },
+ "T2 melanoma vs all other": {
+  "Derm7pt TEST (in-domain)": {
+   "R rule (no training)": 0.8829056375025258,
+   "G probe glyphs": 0.8784266181720212,
+   "I probe ImageNet": 0.8946251768033946,
+   "C1 concat probe": 0.9028423250488314,
+   "F1 z(G)+z(I)": 0.9190072068431333,
+   "F2 stacked LR": 0.9117666868727689,
+   "F3 z(R)+z(I)": 0.9213645854381356
+  },
+  "BCN20000": {
+   "R rule (no training)": 0.790685773840542,
+   "G probe glyphs": 0.7725211047420533,
+   "I probe ImageNet": 0.65297967691506,
+   "C1 concat probe": 0.6804398124022928,
+   "F1 z(G)+z(I)": 0.7332975508077124,
+   "F2 stacked LR": 0.750774361646691,
+   "F3 z(R)+z(I)": 0.7333788431474726
+  },
+  "HAM10000": {
+   "R rule (no training)": 0.7879784801613988,
+   "G probe glyphs": 0.7661223940820445,
+   "I probe ImageNet": 0.6047612642905178,
+   "C1 concat probe": 0.6083268325487559,
+   "F1 z(G)+z(I)": 0.7132938802958977,
+   "F2 stacked LR": 0.7414270342972428,
+   "F3 z(R)+z(I)": 0.713740416946873
+  },
+  "ISIC2019": {
+   "R rule (no training)": 0.7664793814432989,
+   "G probe glyphs": 0.7570644329896907,
+   "I probe ImageNet": 0.7413092783505155,
+   "C1 concat probe": 0.7464355670103093,
+   "F1 z(G)+z(I)": 0.7792422680412372,
+   "F2 stacked LR": 0.78355412371134,
+   "F3 z(R)+z(I)": 0.7790257731958764
+  },
+  "ISIC2020": {
+   "R rule (no training)": 0.7125840000000001,
+   "G probe glyphs": 0.7125300000000001,
+   "I probe ImageNet": 0.71762,
+   "C1 concat probe": 0.680686,
+   "F1 z(G)+z(I)": 0.7452179999999999,
+   "F2 stacked LR": 0.7428279999999999,
+   "F3 z(R)+z(I)": 0.7424940000000001
+  },
+  "pooled": {
+   "R rule (no training)": 0.758355338857641,
+   "G probe glyphs": 0.7470481636850455,
+   "I probe ImageNet": 0.6688841690337791,
+   "C1 concat probe": 0.673369141788471,
+   "F1 z(G)+z(I)": 0.7368263722981997,
+   "F2 stacked LR": 0.7491136065075215,
+   "F3 z(R)+z(I)": 0.736115356759909
+  }
+ }
+}

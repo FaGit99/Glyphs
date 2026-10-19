@@ -1,0 +1,44 @@
+.venv/
+__pycache__/
+*.pyc
+glyphs/.venv/
+glyphs/cache/
+glyphs/data/
+glyphs/external/
+glyphs/export_synth_train/
+glyphs/models/*.pt
+glyphs/models/*.pth
+glyphs/models/*.npz
+*.pt
+*.pth
+*.npz
+*.pkl
+*.gguf
+glyphs/web_samples/
+
+# outputs: only the glyph register and the mission figures are published
+glyphs/out/*
+!glyphs/out/register/
+!glyphs/out/mission_fig_*.png
+
+# papers: only the V8 build and its PDF (third-party PDFs and older drafts stay local)
+glyphs/Papers/*
+!glyphs/Papers/build_v8/
+!glyphs/Papers/Synthetic Glyphs for Dermatologist-Oriented Structure Detection V8.pdf
+
+# not part of the glyph project / internal working notes
+kolibri_chat.py
+start_kolibri_server.sh
+bench_server.py
+llama-server.log
+/requirements.txt
+backbone_study/
+bolt_vllm/
+glyphsbak261019/
+glyphs/SITZUNG_*.md
+glyphs/MISSION_synthetic_vs_mixed.md
+glyphs/ToDo*.md
+glyphs/logs_mission/
+glyphs/logs_v3/
+glyphs/make_v3_dir.sh
+glyphs/v3/

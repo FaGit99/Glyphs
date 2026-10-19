@@ -1,0 +1,342 @@
+{
+ "HAM10000": {
+  "T1 Melanom gegen Naevus | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 800,
+   "auc": 0.8144399999999999,
+   "ci": [
+    0.7905963361583751,
+    0.8375939358294143
+   ],
+   "sens3": 0.372,
+   "spec3": 0.92625
+  },
+  "T1 Melanom gegen Naevus | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 800,
+   "auc": 0.8144399999999999,
+   "ci": [
+    0.7919518134230225,
+    0.8365246130849958
+   ],
+   "sens3": 0.372,
+   "spec3": 0.92625
+  },
+  "T1 Melanom gegen Naevus | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 308,
+   "auc": 0.7148701298701299,
+   "ci": [
+    0.679222278253887,
+    0.7536949129271786
+   ],
+   "sens3": 0.372,
+   "spec3": 0.8474025974025974
+  },
+  "T2 Melanom gegen alle übrigen | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 1487,
+   "auc": 0.7879784801613988,
+   "ci": [
+    0.7630263208431578,
+    0.811733541251803
+   ],
+   "sens3": 0.372,
+   "spec3": 0.9145931405514459
+  },
+  "T2 Melanom gegen alle übrigen | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 1428,
+   "auc": 0.7960826330532214,
+   "ci": [
+    0.7713961784048119,
+    0.8201943964470908
+   ],
+   "sens3": 0.372,
+   "spec3": 0.9208683473389355
+  },
+  "T2 Melanom gegen alle übrigen | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 798,
+   "auc": 0.7218395989974937,
+   "ci": [
+    0.6937577871249782,
+    0.757038011807814
+   ],
+   "sens3": 0.372,
+   "spec3": 0.87468671679198
+  }
+ },
+ "BCN20000": {
+  "T1 Melanom gegen Naevus | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 800,
+   "auc": 0.7204225,
+   "ci": [
+    0.6823776779023576,
+    0.7492453546704114
+   ],
+   "sens3": 0.308,
+   "spec3": 0.8975
+  },
+  "T1 Melanom gegen Naevus | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 628,
+   "auc": 0.7132006369426751,
+   "ci": [
+    0.675344980352585,
+    0.7461737303544487
+   ],
+   "sens3": 0.308,
+   "spec3": 0.8996815286624203
+  },
+  "T1 Melanom gegen Naevus | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 536,
+   "auc": 0.7058507462686567,
+   "ci": [
+    0.6639427205726772,
+    0.7442049995604496
+   ],
+   "sens3": 0.308,
+   "spec3": 0.8899253731343284
+  },
+  "T2 Melanom gegen alle übrigen | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 1919,
+   "auc": 0.790685773840542,
+   "ci": [
+    0.7643462761166753,
+    0.8174397420930496
+   ],
+   "sens3": 0.308,
+   "spec3": 0.9468473163105784
+  },
+  "T2 Melanom gegen alle übrigen | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 1297,
+   "auc": 0.7730578257517347,
+   "ci": [
+    0.7409124548506556,
+    0.8060491252884632
+   ],
+   "sens3": 0.308,
+   "spec3": 0.9421742482652274
+  },
+  "T2 Melanom gegen alle übrigen | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 1154,
+   "auc": 0.7734038128249566,
+   "ci": [
+    0.7428693230321086,
+    0.8053355324960549
+   ],
+   "sens3": 0.308,
+   "spec3": 0.9402079722703639
+  }
+ },
+ "ISIC2019": {
+  "T1 Melanom gegen Naevus | alle gezogenen": {
+   "n_pos": 388,
+   "n_neg": 800,
+   "auc": 0.7532957474226805,
+   "ci": [
+    0.7271483298404319,
+    0.7803889182493082
+   ],
+   "sens3": 0.23969072164948454,
+   "spec3": 0.9425
+  },
+  "T1 Melanom gegen Naevus | in V17 enthalten": {
+   "n_pos": 387,
+   "n_neg": 590,
+   "auc": 0.7485700521175492,
+   "ci": [
+    0.7156241777532548,
+    0.7813791849925231
+   ],
+   "sens3": 0.24031007751937986,
+   "spec3": 0.9457627118644067
+  },
+  "T1 Melanom gegen Naevus | nur histologisch gesichert": {
+   "n_pos": 387,
+   "n_neg": 590,
+   "auc": 0.7485700521175492,
+   "ci": [
+    0.7123611099834977,
+    0.7771718112600746
+   ],
+   "sens3": 0.24031007751937986,
+   "spec3": 0.9457627118644067
+  },
+  "T2 Melanom gegen alle übrigen | alle gezogenen": {
+   "n_pos": 388,
+   "n_neg": 1000,
+   "auc": 0.7664793814432989,
+   "ci": [
+    0.7407260146958217,
+    0.7924623821072785
+   ],
+   "sens3": 0.23969072164948454,
+   "spec3": 0.951
+  },
+  "T2 Melanom gegen alle übrigen | in V17 enthalten": {
+   "n_pos": 387,
+   "n_neg": 748,
+   "auc": 0.7601321007613757,
+   "ci": [
+    0.7286586528205625,
+    0.792039163146381
+   ],
+   "sens3": 0.24031007751937986,
+   "spec3": 0.9532085561497327
+  },
+  "T2 Melanom gegen alle übrigen | nur histologisch gesichert": {
+   "n_pos": 387,
+   "n_neg": 748,
+   "auc": 0.7601321007613757,
+   "ci": [
+    0.7267011176836783,
+    0.7880475360873218
+   ],
+   "sens3": 0.24031007751937986,
+   "spec3": 0.9532085561497327
+  }
+ },
+ "ISIC2020": {
+  "T1 Melanom gegen Naevus | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 800,
+   "auc": 0.6831125,
+   "ci": [
+    0.6502600972926024,
+    0.716522961049694
+   ],
+   "sens3": 0.184,
+   "spec3": 0.94
+  },
+  "T1 Melanom gegen Naevus | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 800,
+   "auc": 0.6831125,
+   "ci": [
+    0.6537471905920467,
+    0.7183564418884079
+   ],
+   "sens3": 0.184,
+   "spec3": 0.94
+  },
+  "T1 Melanom gegen Naevus | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 153,
+   "auc": 0.7532941176470589,
+   "ci": [
+    0.7124154801230959,
+    0.7961206599242816
+   ],
+   "sens3": 0.184,
+   "spec3": 0.9607843137254902
+  },
+  "T2 Melanom gegen alle übrigen | alle gezogenen": {
+   "n_pos": 500,
+   "n_neg": 1000,
+   "auc": 0.7125840000000001,
+   "ci": [
+    0.6807770185594627,
+    0.740528264650603
+   ],
+   "sens3": 0.184,
+   "spec3": 0.949
+  },
+  "T2 Melanom gegen alle übrigen | in V17 enthalten": {
+   "n_pos": 500,
+   "n_neg": 1000,
+   "auc": 0.7125840000000001,
+   "ci": [
+    0.6807045926484369,
+    0.7413998586538572
+   ],
+   "sens3": 0.184,
+   "spec3": 0.949
+  },
+  "T2 Melanom gegen alle übrigen | nur histologisch gesichert": {
+   "n_pos": 500,
+   "n_neg": 160,
+   "auc": 0.7495375,
+   "ci": [
+    0.707078857758572,
+    0.7988169375821096
+   ],
+   "sens3": 0.184,
+   "spec3": 0.95625
+  }
+ },
+ "gepoolt": {
+  "T1 Melanom gegen Naevus | alle gezogenen": {
+   "n_pos": 1888,
+   "n_neg": 3200,
+   "auc": 0.7413049523305085,
+   "ci": [
+    0.7262183827133857,
+    0.7554213452997508
+   ],
+   "sens3": 0.2780720338983051,
+   "spec3": 0.9265625
+  },
+  "T1 Melanom gegen Naevus | in V17 enthalten": {
+   "n_pos": 1887,
+   "n_neg": 2818,
+   "auc": 0.7379270891983287,
+   "ci": [
+    0.7210816832964431,
+    0.7530987500001808
+   ],
+   "sens3": 0.27821939586645467,
+   "spec3": 0.9283179559971612
+  },
+  "T1 Melanom gegen Naevus | nur histologisch gesichert": {
+   "n_pos": 1887,
+   "n_neg": 1587,
+   "auc": 0.7206195409242223,
+   "ci": [
+    0.7000703820587573,
+    0.7394213321266743
+   ],
+   "sens3": 0.27821939586645467,
+   "spec3": 0.9092627599243857
+  },
+  "T2 Melanom gegen alle übrigen | alle gezogenen": {
+   "n_pos": 1888,
+   "n_neg": 5406,
+   "auc": 0.758355338857641,
+   "ci": [
+    0.7430948788372198,
+    0.7734004080467142
+   ],
+   "sens3": 0.2780720338983051,
+   "spec3": 0.9391416944136145
+  },
+  "T2 Melanom gegen alle übrigen | in V17 enthalten": {
+   "n_pos": 1887,
+   "n_neg": 4473,
+   "auc": 0.7511725241634106,
+   "ci": [
+    0.7368089875635222,
+    0.7637981588476043
+   ],
+   "sens3": 0.27821939586645467,
+   "spec3": 0.9387435725463894
+  },
+  "T2 Melanom gegen alle übrigen | nur histologisch gesichert": {
+   "n_pos": 1887,
+   "n_neg": 2860,
+   "auc": 0.7315413521295875,
+   "ci": [
+    0.7155089447673384,
+    0.7483533676706747
+   ],
+   "sens3": 0.27821939586645467,
+   "spec3": 0.9262237762237763
+  }
+ }
+}

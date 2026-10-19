@@ -1,0 +1,85 @@
+ID,Category,Metaphoric term,Descriptive term (IDS),Site / imaging constraint,Associated diagnoses (as listed in source),ISIC 2018 Task 2 label,Derm7pt label,PH2 label,Source,Expert-labelled data available?,Notes (from source),Kittler table
+DS001,Lines,Pigment network,"Lines, reticular",,Melanocytic lesions; dermatofibroma; solar lentigo,pigment_network,pigment_network = TYP / ATP,Pigment network (T / AT),Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table I
+DS002,Lines,Delicate network,"Lines, reticular and thin",,Melanocytic nevi,(rolls up to pigment_network),pigment_network = TYP (closest; not identical),,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS003,Lines,Broadened network,"Lines, reticular and thick",,Melanoma,(rolls up to pigment_network),pigment_network = ATP (closest; not identical),,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS004,Lines,Atypical pigment network,"Lines, reticular and thick, or reticular lines that vary in colour",,Melanoma,(rolls up to pigment_network),pigment_network = ATP,Pigment network = AT,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table I
+DS005,Lines,Negative pigment network,"Lines, reticular, hypopigmented, around brown clods",,Melanoma; Spitz nevus,negative_network,,,Kittler 2016 (IDS 3rd consensus),yes,"Former synonyms: inverse network, reticular depigmentation",Kittler 2016 Table I
+DS006,Lines,Shiny white streaks,"Lines, white, perpendicular",Polarized dermoscopy only,Melanoma; BCC; Spitz nevus; dermatofibroma,,,,Kittler 2016 (IDS 3rd consensus),no,"Former synonyms: chrysalis, chrysalids, crystalline",Kittler 2016 Table I
+DS007,Lines,Branched streaks,"Lines, branched",,Melanocytic lesion,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS008,Lines,Streaks,"Lines, radial (always at periphery)",,Reed nevus; melanoma; recurrent nevus,streaks,streaks = REG / IR,Streaks (A / P),Kittler 2016 (IDS 3rd consensus),yes,"Table II lists radial streaming, pseudopods, branched streaks under Streaks",Kittler 2016 Table I
+DS009,Lines,Radial streaming,"Lines, radial and segmental",,Melanoma; recurrent nevi,(probably within streaks; not stated),,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS010,Lines,Leaflike areas,"Lines, radial, connected to common base",,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,Variously shaped large clods are sometimes also termed leaflike areas,Kittler 2016 Table I
+DS011,Lines,Spoke wheel area,"Lines, radial, converging to central dot or clod",,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,A clod within a clod has also been termed spoke-wheel area / concentric structure,Kittler 2016 Table I
+DS012,Lines,Cerebriform pattern,"Lines, curved and thick",,Seborrheic keratosis,,,,Kittler 2016 (IDS 3rd consensus),no,"Former synonym: brainlike appearance; components: fissures and ridges (former: gyri and sulci, fat fingers)",Kittler 2016 Table I
+DS013,Lines,Fingerprinting,"Lines, brown, curved, parallel, thin",,Solar lentigo,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS014,Lines,Crypts,"Lines, curved and thick, combined with clods",,Seborrheic keratosis,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS015,Lines,Fibrillar pattern,"Lines, parallel, short, crossing ridges",Volar (palms/soles),Acral nevi,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS016,Lines,Parallel ridge pattern,"Lines, parallel, thick, on ridges",Volar (palms/soles),Acral melanoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS017,Lines,Latticelike pattern,"Lines, parallel, thin, in furrows and crossing ridges",Volar (palms/soles),Acral nevi,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS018,Lines,Parallel furrows pattern,"Lines, parallel, thin, in furrows",Volar (palms/soles),Acral nevi,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS019,Lines,Rhomboids / zig-zag pattern,"Lines, angulated or polygonal",Facial,Lentigo maligna,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS020,Lines,Angulated lines / polygons,"Lines, angulated or polygonal","Non-facial, non-acral",Lentiginous melanomas,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS021,Lines,(no metaphoric term),"Lines, reticular, white",,Melanoma; Spitz nevus; dermatofibroma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS022,Lines,Typical pigment network,(Table II only),,,(rolls up to pigment_network),pigment_network = TYP,Pigment network = T,Kittler 2016 (IDS 3rd consensus),yes,"Table II: minimal variability in colour, thickness, spacing; symmetric",Kittler 2016 Table II
+DS023,Pseudopods,Starburst pattern,"Pseudopods, circumferential, or lines, radial, circumferential",,Reed nevus,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS024,Pseudopods,Pseudopods,(Table II only; listed under Streaks),,,(rolls up to streaks),,,Kittler 2016 (IDS 3rd consensus),no,"Bulbous, often kinked projections at the lesion edge",Kittler 2016 Table II
+DS025,Clods,Globules,"Clods, small, round or oval",,Various diagnoses,globules (incl. dots),dots_and_globules = REG / IR,Dots/globules (A / T / AT),Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table I
+DS026,Clods,Rim of brown globules,"Clods, brown, circumferential",,Growing nevi,(rolls up to globules),,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS027,Clods,Comedo-like openings,"Clods, brown, yellow, or orange (rarely black)",,Seborrheic keratosis,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS028,Clods,Concentric globules,"Clods, brown or blue, concentric (clod within a clod)",,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS029,Clods,Cobblestone pattern,"Clods, brown or skin-coloured, large and polygonal",,Dermal nevi,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS030,Clods,Blue-gray ovoid nests,"Clods, blue, large, clustered",,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS031,Clods,Blue globules,"Clods, blue, small",,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS032,Clods,Shiny white blotches and strands,"Clods, white, shiny",Polarized dermoscopy only,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS033,Clods,Milky-red globules,"Clods, pink and small",,Melanoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS034,Clods,Red lacunes,"Clods, red or purple",,Hemangioma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS035,Clods,Variant of spoke wheel area,Clod within a clod (concentric clods),,BCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS036,Clods,"Globules, regular / irregular",(Table II only),,,(rolls up to globules),dots_and_globules = REG / IR (closest; Derm7pt pools dots and globules),Dots/globules = T / AT (closest),Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table II
+DS037,Dots,Granularity / granules,"Dots, any colour",,Various diagnoses,(globules incl. dots),(dots_and_globules),(Dots/globules),Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS038,Dots,Peppering,"Dots, gray",,Melanoma; lichen planus-like keratosis,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS039,Dots,Annular-granular pattern,"Dots, gray and circles, gray",,Lentigo maligna,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS040,Dots,Milia-like cysts (cloudy or starry),"Dots or clods, white, clustered or disseminated",,Seborrheic keratosis,milia_like_cyst,,,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table I
+DS041,Dots,Rosettes,"Dots, white, four arranged in a square",Polarized dermoscopy only,"Various diagnoses, but mainly actinic keratosis; SCC; actinic-damaged skin",,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS042,Dots,Linear dots,"Dots, peripheral, arranged in lines",,Pigmented Bowen disease,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS043,Dots,Targetoid dots,"Dots, brown, central (in hypopigmented spaces between reticular lines)",,Congenital nevi,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS044,Dots,"Dots, regular / irregular",(Table II only),,,(globules incl. dots),dots_and_globules = REG / IR (closest; pooled),Dots/globules = T / AT (closest),Kittler 2016 (IDS 3rd consensus),no,Regular: clustered centrally or on network lines (target network),Kittler 2016 Table II
+DS045,Circles,Circle within a circle,"Circles, concentric",,Lentigo maligna,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS046,Circles,Asymmetric pigmented follicular openings,"Circles, incomplete",,Lentigo maligna,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS047,Circles,(no metaphoric term),"Circles, white",,SCC,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS048,Structureless,Blotch,"Structureless zone, brown or black",,Centric: hypermelanotic Clark (dysplastic) nevus; eccentric: melanoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS049,Structureless,Blue-whitish veil,"Structureless zone, blue",,Melanoma,,blue_whitish_veil = PRS,Blue-whitish veil (A / P),Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table I
+DS050,Structureless,Milky-red areas,"Structureless zone, pink",,Melanoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS051,Structureless,Scarlike depigmentation,"Structureless zone, white",,Melanoma,,regression_structures = WA (closest; not identical),(Regression areas),Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS052,Structureless,Central white patch,"Structureless zone, white, central",,Dermatofibroma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS053,Structureless,Rainbow pattern,"Structureless zone, polychromatic",,Various diagnoses,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS054,Structureless,Strawberry pattern,"Structureless, red, interrupted by follicular openings",Facial,Actinic keratosis,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS055,Structureless,Homogeneous pattern,"Structureless, any colour",,Various diagnoses,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS056,Structureless,Pseudonetwork,"Structureless, brown, interrupted by follicular openings",Facial,Facial pigmented lesions,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS057,Structureless,(no metaphoric term),"Structureless, brown (tan), eccentric",,Melanoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS058,Structureless,"Blotch, regular / irregular",(Table II only),,Regular: one central blotch surrounded by network; irregular: >1 or off-centre,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table II
+DS059,Border,Moth-eaten border,"Sharply demarcated, scalloped border",,Solar lentigo,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table I
+DS060,Vessel morphology,(no metaphoric term) [common usage: dotted vessels],"Vessels, dots (tiny pinpoint vessels)",,Flat melanocytic lesions; inflammatory diseases; Bowen disease,,vascular_structures = DOT,,Kittler 2016 (IDS 3rd consensus),yes,'Dotted vessels' is common usage and the Derm7pt label; Table III gives no metaphoric term,Kittler 2016 Table III
+DS061,Vessel morphology,Red-purple lacunes,"Vessels, clods",,Hemangioma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS062,Vessel morphology,(no metaphoric term),"Vessels, linear",,Various diagnoses,,,,Kittler 2016 (IDS 3rd consensus),no,Table III: irregular if haphazard sizes/shapes/curves; regular if short fine lines prevail,Kittler 2016 Table III
+DS063,Vessel morphology,Glomerular vessels,"Vessels, coiled",,Bowen disease,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS064,Vessel morphology,Hairpin vessels,"Vessels, looped",,Seborrheic keratosis; viral warts,,vascular_structures = HP,,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table III
+DS065,Vessel morphology,Linear irregular vessels,"Vessels, serpentine",,Flat BCC; melanoma,,vascular_structures = LIR,,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table III
+DS066,Vessel morphology,Corkscrew vessels,"Vessels, helical",,Melanoma; metastasis,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS067,Vessel morphology,Comma vessels,"Vessels, curved",,Dermal nevi,,vascular_structures = COM,,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table III
+DS068,Vessel morphology,(no metaphoric term),"Vessels, monomorphous",,Various diagnoses,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS069,Vessel morphology,(no metaphoric term),"Vessels, polymorphous",,"May indicate malignancy in appropriate context, e.g. flat melanocytic lesions",,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS070,Vessel arrangement,Crown vessels,"Vessels, radial",,Sebaceous hyperplasia,,vascular_structures = WTH (wreath; equivalence not confirmed),,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS071,Vessel arrangement,String of pearls,"Vessels, serpiginous",,Clear cell acanthoma,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS072,Vessel arrangement,Arborizing vessels,"Vessels, branched",,BCC,,vascular_structures = ARB,,Kittler 2016 (IDS 3rd consensus),yes,,Kittler 2016 Table III
+DS073,Vessel arrangement,(no metaphoric term),"Vessels, clustered",,Bowen disease,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS074,Vessel arrangement,Targetoid vessels,"Vessels, centred dots",,Congenital melanocytic nevus,,,,Kittler 2016 (IDS 3rd consensus),no,,Kittler 2016 Table III
+DS075,Dataset criterion,Regression structures,"(Table II group heading; listed under it: peppering/granularity, scarlike depigmentation)",,(7-point checklist criterion),,regression_structures = BA / WA / CMB,Regression areas (A / P),Kittler 2016 Table II; Derm7pt; PH2,yes,,Kittler 2016 Table II
+DS076,Dataset criterion,Vessels within regression,(not in IDS index used here),,(7-point checklist value),,vascular_structures = WR,,Derm7pt,yes,,
+DS077,Dataset criterion,"Pigmentation, regular / irregular",(not in IDS index used here),,(7-point checklist criterion),,pigmentation = DR / LR / DI / LI,,Derm7pt,yes,,
+DS078,Dataset criterion,Asymmetry,(global feature),,,,,Asymmetry 0 / 1 / 2 axes,PH2,yes,,
+DS079,Colour,White,(colour),,,,,Colour: White,PH2,yes,,
+DS080,Colour,Red,(colour),,,,,Colour: Red,PH2,yes,,
+DS081,Colour,Light-brown,(colour),,,,,Colour: Light-brown,PH2,yes,,
+DS082,Colour,Dark-brown,(colour),,,,,Colour: Dark-brown,PH2,yes,,
+DS083,Colour,Blue-gray,(colour),,,,,Colour: Blue-gray,PH2,yes,,
+DS084,Colour,Black,(colour),,,,,Colour: Black,PH2,yes,,

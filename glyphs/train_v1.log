@@ -1,0 +1,12 @@
+epoch 1/12 loss 0.2399  synthetic-val mean AUC 0.833 (67 IDs)  7s
+epoch 2/12 loss 0.0867  synthetic-val mean AUC 0.959 (67 IDs)  13s
+epoch 3/12 loss 0.0503  synthetic-val mean AUC 0.974 (67 IDs)  19s
+epoch 4/12 loss 0.0375  synthetic-val mean AUC 0.982 (67 IDs)  26s
+epoch 5/12 loss 0.0306  synthetic-val mean AUC 0.984 (67 IDs)  32s
+epoch 6/12 loss 0.0254  synthetic-val mean AUC 0.985 (67 IDs)  38s
+epoch 7/12 loss 0.0216  synthetic-val mean AUC 0.986 (67 IDs)  45s
+epoch 8/12 loss 0.0184  synthetic-val mean AUC 0.987 (67 IDs)  51s
+epoch 9/12 loss 0.0160  synthetic-val mean AUC 0.987 (67 IDs)  58s
+epoch 10/12 loss 0.0144  synthetic-val mean AUC 0.988 (67 IDs)  64s
+epoch 11/12 loss 0.0134  synthetic-val mean AUC 0.988 (67 IDs)  70s
+epoch 12/12 loss 0.0129  synthetic-val mean AUC 0.988 (67 IDs)  76s

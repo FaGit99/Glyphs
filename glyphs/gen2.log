@@ -1,0 +1,2 @@
+val: 1600 images in 43s; labels/img 2.74; mean region coverage of lesion-having images 0.0073
+train: 16000 images in 218s; labels/img 2.79; mean region coverage of lesion-having images 0.0072

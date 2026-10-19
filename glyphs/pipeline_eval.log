@@ -1,0 +1,13 @@
+100/500 34s
+200/500 63s
+300/500 95s
+400/500 135s
+500/500 195s
+
+lesion Dice inside the pipeline: mean 0.906, median 0.939; Dice<0.5 in 1.4% of images
+attribute          #pos/#neg    AUC   sens   spec  detected(non-weak)  outside-share pred/gt zones warn-rate
+pigment_network    224/276    0.915   0.95   0.63                 315         0.044 /  0.042         0.05
+negative_network    23/477    0.882   0.52   0.96                  33         0.121 /  0.091         0.12
+streaks              9/491    0.926   0.44   0.99                  10         0.026 /  0.026         0.10
+milia_like_cyst     34/466    0.852   0.38   0.95                  35         0.072 /  0.108         0.09
+globules            70/430    0.920   0.86   0.85                 123         0.014 /  0.014         0.02

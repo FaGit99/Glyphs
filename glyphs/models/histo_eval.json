@@ -1,0 +1,601 @@
+{
+ "alle nutzbaren Testbilder": {
+  "n": 8054,
+  "malignant": 1766,
+  "benign": 6288,
+  "auroc": {
+   "D Direktmodell": 0.9675270842518708,
+   "R 7-Punkte-Regel (ohne Training)": 0.7156968530541556,
+   "Gp Sonde A (90 Kanäle)": 0.8787407894092254,
+   "S2 zweistufig A (90 Kanäle)": 0.9689926920427988,
+   "Gp Sonde B (19 validierte Kanäle)": 0.8649301263043234,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.9687759351793417
+  },
+  "spec95": {
+   "D Direktmodell": 0.8419211195928753,
+   "R 7-Punkte-Regel (ohne Training)": 0.25604325699745545,
+   "Gp Sonde A (90 Kanäle)": 0.5054071246819338,
+   "S2 zweistufig A (90 Kanäle)": 0.8462150127226463,
+   "Gp Sonde B (19 validierte Kanäle)": 0.4729643765903308,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.8449427480916031
+  },
+  "auroc_ci": {
+   "D Direktmodell": [
+    0.9593121584593435,
+    0.9744143747139227
+   ],
+   "R 7-Punkte-Regel (ohne Training)": [
+    0.6889086699577054,
+    0.744531522756132
+   ],
+   "Gp Sonde A (90 Kanäle)": [
+    0.8586450046667305,
+    0.8936522929487922
+   ],
+   "S2 zweistufig A (90 Kanäle)": [
+    0.9610332712487696,
+    0.9755769962730554
+   ],
+   "Gp Sonde B (19 validierte Kanäle)": [
+    0.8463349900312208,
+    0.879703614418583
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    0.9606876965796309,
+    0.9754063006105992
+   ]
+  },
+  "d_auroc_vs_direct": {
+   "S2 zweistufig A (90 Kanäle)": [
+    0.0014430253385886082,
+    0.00021982869742148136,
+    0.002829329318253104
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    0.0012256402633211171,
+    -0.0005566136408173189,
+    0.0033969542448712303
+   ]
+  },
+  "direct_at_val_thr": {
+   "sens": 0.9405436013590034,
+   "spec": 0.8665712468193384
+  },
+  "hint": {
+   "A (90 Kanäle)": {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 391,
+    "flagged_malignant": 0.06905370843989769,
+    "lift": 3.652612349287541,
+    "caught": 27,
+    "ci": {
+     "flagged_malignant": [
+      0.03532162612264319,
+      0.10953546222376485
+     ],
+     "lift": [
+      2.076078352736917,
+      5.428104366711911
+     ],
+     "caught_share": [
+      0.14810140474100086,
+      0.3855303030303029
+     ]
+    }
+   },
+   "B (19 validierte Kanäle)": {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 423,
+    "flagged_malignant": 0.05673758865248227,
+    "lift": 3.001148260722729,
+    "caught": 24,
+    "ci": {
+     "flagged_malignant": [
+      0.02602296667339026,
+      0.09311685426540281
+     ],
+     "lift": [
+      1.502279562483062,
+      4.54563405810813
+     ],
+     "caught_share": [
+      0.11105769230769232,
+      0.3517963027554935
+     ]
+    }
+   },
+   "B, auf histologischer Validierung angepasst": {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 134,
+    "flagged_malignant": 0.029850746268656716,
+    "lift": 1.5789623312011372,
+    "caught": 4,
+    "ci": {
+     "flagged_malignant": [
+      0.006894501522070015,
+      0.06275836614173227
+     ],
+     "lift": [
+      0.36431555230787965,
+      3.278991006014212
+     ],
+     "caught_share": [
+      0.008652836134453782,
+      0.07772653721682847
+     ]
+    }
+   }
+  }
+ },
+ "nur histologisch gesichert": {
+  "n": 3143,
+  "malignant": 1766,
+  "benign": 1377,
+  "auroc": {
+   "D Direktmodell": 0.8992146499974093,
+   "R 7-Punkte-Regel (ohne Training)": 0.5899657123870479,
+   "Gp Sonde A (90 Kanäle)": 0.7601273469414611,
+   "S2 zweistufig A (90 Kanäle)": 0.8999552591474071,
+   "Gp Sonde B (19 validierte Kanäle)": 0.7413464693792453,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.8989350196687038
+  },
+  "spec95": {
+   "D Direktmodell": 0.4756717501815541,
+   "R 7-Punkte-Regel (ohne Training)": 0.11474219317356572,
+   "Gp Sonde A (90 Kanäle)": 0.24691358024691357,
+   "S2 zweistufig A (90 Kanäle)": 0.48366013071895425,
+   "Gp Sonde B (19 validierte Kanäle)": 0.2185911401597676,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.4829339143064633
+  },
+  "auroc_ci": {
+   "D Direktmodell": [
+    0.8787888289794993,
+    0.9146725901569233
+   ],
+   "R 7-Punkte-Regel (ohne Training)": [
+    0.5518991373368313,
+    0.6213626407805409
+   ],
+   "Gp Sonde A (90 Kanäle)": [
+    0.7323003940274098,
+    0.7827846387316513
+   ],
+   "S2 zweistufig A (90 Kanäle)": [
+    0.8783819891922358,
+    0.9154821273672553
+   ],
+   "Gp Sonde B (19 validierte Kanäle)": [
+    0.7116722407688839,
+    0.7644798546915226
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    0.8763180960795032,
+    0.9148523338267368
+   ]
+  },
+  "d_auroc_vs_direct": {
+   "S2 zweistufig A (90 Kanäle)": [
+    0.00072860033514352,
+    -0.0009376474508359572,
+    0.002475367927526936
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    -0.0002953394792297626,
+    -0.0025401829274394327,
+    0.001757898193892554
+   ]
+  },
+  "direct_at_val_thr": {
+   "sens": 0.9405436013590034,
+   "spec": 0.5410312273057372
+  },
+  "hint": {
+   "A (90 Kanäle)": {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 171,
+    "flagged_malignant": 0.15789473684210525,
+    "lift": 1.2781954887218043,
+    "caught": 27,
+    "ci": {
+     "flagged_malignant": [
+      0.08126105933702961,
+      0.24268642119350742
+     ],
+     "lift": [
+      0.7755763011034541,
+      1.8481014620931837
+     ],
+     "caught_share": [
+      0.159411214953271,
+      0.36971704623878515
+     ]
+    }
+   },
+   "B (19 validierte Kanäle)": {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 170,
+    "flagged_malignant": 0.1411764705882353,
+    "lift": 1.1428571428571428,
+    "caught": 24,
+    "ci": {
+     "flagged_malignant": [
+      0.061425851359365735,
+      0.24852296832075668
+     ],
+     "lift": [
+      0.5292313456494797,
+      1.8320027347398065
+     ],
+     "caught_share": [
+      0.1015061936936937,
+      0.3743475274725274
+     ]
+    }
+   },
+   "B, auf histologischer Validierung angepasst": {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 47,
+    "flagged_malignant": 0.0851063829787234,
+    "lift": 0.6889564336372846,
+    "caught": 4,
+    "ci": {
+     "flagged_malignant": [
+      0.019794117647058823,
+      0.18769641734758008
+     ],
+     "lift": [
+      0.1785438012204521,
+      1.3514543695468613
+     ],
+     "caught_share": [
+      0.00836426670402017,
+      0.07462686567164178
+     ]
+    }
+   }
+  }
+ },
+ "maligne + benign_weak (Kontrast)": {
+  "n": 6677,
+  "malignant": 1766,
+  "benign": 4911,
+  "auroc": {
+   "D Direktmodell": 0.9866812732089864,
+   "R 7-Punkte-Regel (ohne Training)": 0.7509507281709561,
+   "Gp Sonde A (90 Kanäle)": 0.9119989263015307,
+   "S2 zweistufig A (90 Kanäle)": 0.98835016406417,
+   "Gp Sonde B (19 validierte Kanäle)": 0.8995818663951057,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.9883586964617992
+  },
+  "spec95": {
+   "D Direktmodell": 0.9446141315414376,
+   "R 7-Punkte-Regel (ohne Training)": 0.29566279780085525,
+   "Gp Sonde A (90 Kanäle)": 0.5778863775198534,
+   "S2 zweistufig A (90 Kanäle)": 0.947872123803706,
+   "Gp Sonde B (19 validierte Kanäle)": 0.5442883323152108,
+   "S2 zweistufig B (19 validierte Kanäle)": 0.9464467521889636
+  },
+  "auroc_ci": {
+   "D Direktmodell": [
+    0.9801461410135773,
+    0.9911269675631271
+   ],
+   "R 7-Punkte-Regel (ohne Training)": [
+    0.7220644073024557,
+    0.7800595808534487
+   ],
+   "Gp Sonde A (90 Kanäle)": [
+    0.8978216367626843,
+    0.9260215564117596
+   ],
+   "S2 zweistufig A (90 Kanäle)": [
+    0.9831376046212523,
+    0.9919889388525922
+   ],
+   "Gp Sonde B (19 validierte Kanäle)": [
+    0.8849808243036472,
+    0.9149382807572484
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    0.9839095171522942,
+    0.9916892922678971
+   ]
+  },
+  "d_auroc_vs_direct": {
+   "S2 zweistufig A (90 Kanäle)": [
+    0.0017177270289976828,
+    0.00022550113085431644,
+    0.0035521745498976335
+   ],
+   "S2 zweistufig B (19 validierte Kanäle)": [
+    0.0017362137051088373,
+    -0.0006525704544796729,
+    0.005078033588834937
+   ]
+  },
+  "direct_at_val_thr": {
+   "sens": 0.9405436013590034,
+   "spec": 0.9578497251069029
+  },
+  "hint": {
+   "A (90 Kanäle)": {
+    "n": 6677,
+    "n_direct_neg": 4809,
+    "missed": 105,
+    "base_rate": 0.021834061135371178,
+    "flagged": 247,
+    "flagged_malignant": 0.10931174089068826,
+    "lift": 5.006477732793523,
+    "caught": 27,
+    "ci": {
+     "flagged_malignant": [
+      0.062122454887580815,
+      0.17464691046658248
+     ],
+     "lift": [
+      3.092828716206658,
+      7.170116891158775
+     ],
+     "caught_share": [
+      0.15967456783656364,
+      0.3697999999999999
+     ]
+    }
+   },
+   "B (19 validierte Kanäle)": {
+    "n": 6677,
+    "n_direct_neg": 4809,
+    "missed": 105,
+    "base_rate": 0.021834061135371178,
+    "flagged": 277,
+    "flagged_malignant": 0.08664259927797834,
+    "lift": 3.968231046931408,
+    "caught": 24,
+    "ci": {
+     "flagged_malignant": [
+      0.03950346545375785,
+      0.1382487503177157
+     ],
+     "lift": [
+      1.906912367610119,
+      5.954351002008653
+     ],
+     "caught_share": [
+      0.10383301366578758,
+      0.36379632098107134
+     ]
+    }
+   },
+   "B, auf histologischer Validierung angepasst": {
+    "n": 6677,
+    "n_direct_neg": 4809,
+    "missed": 105,
+    "base_rate": 0.021834061135371178,
+    "flagged": 91,
+    "flagged_malignant": 0.04395604395604396,
+    "lift": 2.0131868131868136,
+    "caught": 4,
+    "ci": {
+     "flagged_malignant": [
+      0.00975,
+      0.09824667125803485
+     ],
+     "lift": [
+      0.4774008531937264,
+      4.075927094309799
+     ],
+     "caught_share": [
+      0.009044165847263192,
+      0.07446808510638298
+     ]
+    }
+   }
+  }
+ },
+ "_hint_quantiles": {
+  "A (90 Kanäle) | alle nutzbaren Testbilder": [
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 391,
+    "flagged_malignant": 0.06905370843989769,
+    "lift": 3.652612349287541,
+    "caught": 27,
+    "q": 0.9
+   },
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 164,
+    "flagged_malignant": 0.07317073170731707,
+    "lift": 3.870383275261324,
+    "caught": 12,
+    "q": 0.95
+   },
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 42,
+    "flagged_malignant": 0.19047619047619047,
+    "lift": 10.075283446712017,
+    "caught": 8,
+    "q": 0.98
+   }
+  ],
+  "A (90 Kanäle) | nur histologisch gesichert": [
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 171,
+    "flagged_malignant": 0.15789473684210525,
+    "lift": 1.2781954887218043,
+    "caught": 27,
+    "q": 0.9
+   },
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 82,
+    "flagged_malignant": 0.14634146341463414,
+    "lift": 1.1846689895470381,
+    "caught": 12,
+    "q": 0.95
+   },
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 24,
+    "flagged_malignant": 0.3333333333333333,
+    "lift": 2.698412698412698,
+    "caught": 8,
+    "q": 0.98
+   }
+  ],
+  "B (19 validierte Kanäle) | alle nutzbaren Testbilder": [
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 423,
+    "flagged_malignant": 0.05673758865248227,
+    "lift": 3.001148260722729,
+    "caught": 24,
+    "q": 0.9
+   },
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 184,
+    "flagged_malignant": 0.04891304347826087,
+    "lift": 2.5872670807453417,
+    "caught": 9,
+    "q": 0.95
+   },
+   {
+    "n": 8054,
+    "n_direct_neg": 5554,
+    "missed": 105,
+    "base_rate": 0.01890529348217501,
+    "flagged": 70,
+    "flagged_malignant": 0.05714285714285714,
+    "lift": 3.0225850340136056,
+    "caught": 4,
+    "q": 0.98
+   }
+  ],
+  "B (19 validierte Kanäle) | nur histologisch gesichert": [
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 170,
+    "flagged_malignant": 0.1411764705882353,
+    "lift": 1.1428571428571428,
+    "caught": 24,
+    "q": 0.9
+   },
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 76,
+    "flagged_malignant": 0.11842105263157894,
+    "lift": 0.9586466165413533,
+    "caught": 9,
+    "q": 0.95
+   },
+   {
+    "n": 3143,
+    "n_direct_neg": 850,
+    "missed": 105,
+    "base_rate": 0.12352941176470589,
+    "flagged": 31,
+    "flagged_malignant": 0.12903225806451613,
+    "lift": 1.044546850998464,
+    "caught": 4,
+    "q": 0.98
+   }
+  ]
+ },
+ "_states_B": {
+  "alle nutzbaren Testbilder": {
+   "beide_auffaellig": {
+    "n": 1390,
+    "malignant": 1087,
+    "rate": 0.7820143884892087
+   },
+   "nur_direkt": {
+    "n": 1110,
+    "malignant": 574,
+    "rate": 0.5171171171171172
+   },
+   "abweichung": {
+    "n": 423,
+    "malignant": 24,
+    "rate": 0.05673758865248227
+   },
+   "beide_unauffaellig": {
+    "n": 5131,
+    "malignant": 81,
+    "rate": 0.015786396413954396
+   }
+  },
+  "nur histologisch gesichert": {
+   "beide_auffaellig": {
+    "n": 1322,
+    "malignant": 1087,
+    "rate": 0.8222390317700454
+   },
+   "nur_direkt": {
+    "n": 971,
+    "malignant": 574,
+    "rate": 0.5911431513903193
+   },
+   "abweichung": {
+    "n": 170,
+    "malignant": 24,
+    "rate": 0.1411764705882353
+   },
+   "beide_unauffaellig": {
+    "n": 680,
+    "malignant": 81,
+    "rate": 0.11911764705882352
+   }
+  }
+ }
+}
