@@ -47,6 +47,10 @@ python3.12 -m venv .venv
 
 A CUDA GPU is needed for training (one training run takes a few minutes on a recent workstation GPU).
 
+## Licence
+
+The code and the author’s own results and texts are released under the [MIT Licence](LICENSE). Images derived from HAM10000 or the ISIC Archive (in `glyphs/out/register/`, `glyphs/frozen_V2/` and `glyphs/Papers/build_v8/`) are not covered by it and remain subject to the licences of their source datasets.
+
 ## Use of AI tools
 
 An AI assistant (Claude, Anthropic) was used throughout this work under the author’s direction; see the declarations in the paper.
