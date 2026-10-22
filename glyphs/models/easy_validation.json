@@ -1,0 +1,134 @@
+{
+ "DS037": {
+  "feature": "Dots : Irregular",
+  "n_pos": 78,
+  "auroc_oof": 0.837,
+  "auroc_v2_no_training": 0.712
+ },
+ "DS029": {
+  "feature": "Globules / Clods : Cobblestone pattern",
+  "n_pos": 15,
+  "auroc_oof": 0.922,
+  "auroc_v2_no_training": 0.576
+ },
+ "DS025": {
+  "feature": "Globules / Clods : Irregular",
+  "n_pos": 87,
+  "auroc_oof": 0.789,
+  "auroc_v2_no_training": 0.775
+ },
+ "DS026": {
+  "feature": "Globules / Clods : Rim of brown globules",
+  "n_pos": 11,
+  "auroc_oof": 0.987,
+  "auroc_v2_no_training": 0.912
+ },
+ "DS007": {
+  "feature": "Lines : Branched streaks",
+  "n_pos": 18,
+  "auroc_oof": 0.607,
+  "auroc_v2_no_training": 0.467
+ },
+ "DS024": {
+  "feature": "Lines : Pseudopods",
+  "n_pos": 32,
+  "auroc_oof": 0.95,
+  "auroc_v2_no_training": 0.96
+ },
+ "DS009": {
+  "feature": "Lines : Radial streaming",
+  "n_pos": 34,
+  "auroc_oof": 0.965,
+  "auroc_v2_no_training": 0.939
+ },
+ "DS004": {
+  "feature": "Network : Atypical pigment network / Reticulation",
+  "n_pos": 101,
+  "auroc_oof": 0.92,
+  "auroc_v2_no_training": 0.854
+ },
+ "DS003": {
+  "feature": "Network : Broadened pigment network / Reticulation",
+  "n_pos": 35,
+  "auroc_oof": 0.86,
+  "auroc_v2_no_training": 0.857
+ },
+ "DS002": {
+  "feature": "Network : Delicate Pigment Network / Reticulation",
+  "n_pos": 26,
+  "auroc_oof": 0.79,
+  "auroc_v2_no_training": 0.639
+ },
+ "DS005": {
+  "feature": "Network : Negative pigment network",
+  "n_pos": 33,
+  "auroc_oof": 0.935,
+  "auroc_v2_no_training": 0.869
+ },
+ "DS022": {
+  "feature": "Network : Typical pigment network / Reticulation",
+  "n_pos": 69,
+  "auroc_oof": 0.951,
+  "auroc_v2_no_training": 0.847
+ },
+ "DS023": {
+  "feature": "Pattern : Starburst",
+  "n_pos": 14,
+  "auroc_oof": 0.997,
+  "auroc_v2_no_training": 0.975
+ },
+ "DS038": {
+  "feature": "Regression structures : Peppering / Granularity",
+  "n_pos": 69,
+  "auroc_oof": 0.922,
+  "auroc_v2_no_training": 0.616
+ },
+ "DS006": {
+  "feature": "Shiny white structures : Shiny white streaks",
+  "n_pos": 59,
+  "auroc_oof": 0.93,
+  "auroc_v2_no_training": 0.593
+ },
+ "DS048": {
+  "feature": "Structureless : Blotch irregular",
+  "n_pos": 54,
+  "auroc_oof": 0.859,
+  "auroc_v2_no_training": 0.861
+ },
+ "DS049": {
+  "feature": "Structureless : Blue-whitish veil",
+  "n_pos": 55,
+  "auroc_oof": 0.967,
+  "auroc_v2_no_training": 0.946
+ },
+ "DS050": {
+  "feature": "Structureless : Milky red areas",
+  "n_pos": 48,
+  "auroc_oof": 0.943,
+  "auroc_v2_no_training": 0.775
+ },
+ "DS067": {
+  "feature": "Vessels : Comma",
+  "n_pos": 12,
+  "auroc_oof": 0.955,
+  "auroc_v2_no_training": 0.809
+ },
+ "DS060": {
+  "feature": "Vessels : Dotted",
+  "n_pos": 38,
+  "auroc_oof": 0.898,
+  "auroc_v2_no_training": 0.837
+ },
+ "DS065": {
+  "feature": "Vessels : Linear irregular",
+  "n_pos": 39,
+  "auroc_oof": 0.956,
+  "auroc_v2_no_training": 0.807
+ },
+ "DS069": {
+  "feature": "Vessels : Polymorphous",
+  "n_pos": 42,
+  "auroc_oof": 0.973,
+  "auroc_v2_no_training": 0.877
+ }
+}

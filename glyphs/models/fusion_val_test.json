@@ -1,0 +1,18 @@
+{
+ "ALL usable test images": {
+  "D direct (base_448_v17)": 0.9675270842518708,
+  "R glyph rule (no training)": 0.6826379643477735,
+  "Gp glyph probe (90 ch, fit on val)": 0.89319668015296,
+  "S1 one-stage [logit + 90 ch]": 0.9608389598264072,
+  "S2 two-stage [logit, glyph probe]": 0.9699315815560533,
+  "S3 [logit, rule]": 0.9679446586498146
+ },
+ "confirmed labels only": {
+  "D direct (base_448_v17)": 0.8992146499974093,
+  "R glyph rule (no training)": 0.5784256154540168,
+  "Gp glyph probe (90 ch, fit on val)": 0.7862797734336384,
+  "S1 one-stage [logit + 90 ch]": 0.8912476529557337,
+  "S2 two-stage [logit, glyph probe]": 0.9010293685864933,
+  "S3 [logit, rule]": 0.899211771449908
+ }
+}

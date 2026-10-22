@@ -1,0 +1,72 @@
+ID,metaphoric_term,descriptive_term,generator,layer,parent,site,params,unit_note,label_instances_per_scene,connected_units_per_scene,train_images_with_id,train_share_pct
+DS001,Pigment network,"Lines, reticular",g_network,1,network,,,texture patch (area structure),1/1.0/1,149/225.3/335,646,4.0
+DS002,Delicate network,"Lines, reticular and thin",g_network,1,network,,"cell=(12, 16);thr=(1.0, 1.3);alpha=0.4;blur=1.0",texture patch (area structure),1/1.0/1,100/536.1/855,643,4.0
+DS003,Broadened network,"Lines, reticular and thick",g_network,1,network,,"cell=(16, 23);thr=(2.8, 3.6);alpha=0.7",texture patch (area structure),1/1.0/1,9/51.7/79,675,4.2
+DS004,Atypical pigment network,"Lines, reticular and thick, or reticular lines that vary in colour",g_network,1,network,,"cell=(14, 24);thr=(2.4, 3.6);alpha=0.7;irregular=0.9;var=black",texture patch (area structure),1/1.0/1,58/174.7/311,671,4.2
+DS005,Negative pigment network,"Lines, reticular, hypopigmented, around brown clods",g_network,1,negative_network,,"cell=(12, 18);thr=(2.0, 2.6);alpha=0.6;line=skin_light;cover=0.5",texture patch (area structure),1/1.0/1,24/63.2/138,637,4.0
+DS006,Shiny white streaks,"Lines, white, perpendicular",g_white_lines,4,DS006,,,single unit,1/1.0/1,3/4.4/7,650,4.1
+DS007,Branched streaks,"Lines, branched",g_streaks,4,streaks,,"kind=branched;L=(28, 46);step=(14, 22);width=(2.4, 3.4)",single unit,0/1.6/2,0/16.0/35,689,4.3
+DS008,Streaks,"Lines, radial (always at periphery)",g_streaks,4,streaks,,,single unit,1/1.4/2,2/22.8/54,658,4.1
+DS009,Radial streaming,"Lines, radial and segmental",g_streaks,4,streaks,,"span=(0.12, 0.3);L=(16, 32);step=(4, 7);width=(3, 4)",single unit,1/1.8/2,1/5.9/14,613,3.8
+DS010,Leaflike areas,"Lines, radial, connected to common base",g_leaf,2,DS010,,,single unit,1/1.0/1,1/1.2/2,628,3.9
+DS011,Spoke wheel area,"Lines, radial, converging to central dot or clod",g_spoke,2,DS011,,,single unit,1/1.0/1,1/1.2/2,703,4.4
+DS012,Cerebriform pattern,"Lines, curved and thick",g_isolines,1,DS012,,kind=cerebriform,texture patch (area structure),1/1.0/1,5/11.0/21,656,4.1
+DS013,Fingerprinting,"Lines, brown, curved, parallel, thin",g_fingerprint,1,DS013,,,texture patch (area structure),1/1.0/1,77/652.6/1391,698,4.4
+DS014,Crypts,"Lines, curved and thick, combined with clods",g_isolines,1,DS014,,kind=crypts,texture patch (area structure),2/2.0/2,6/19.2/28,688,4.3
+DS015,Fibrillar pattern,"Lines, parallel, short, crossing ridges",g_acral,1,DS015,volar,mode=fibrillar,single unit,1/1.0/1,35/48.5/63,0,0.0
+DS016,Parallel ridge pattern,"Lines, parallel, thick, on ridges",g_acral,1,DS016,volar,mode=ridge,texture patch (area structure),1/1.0/1,25/47.7/68,0,0.0
+DS017,Latticelike pattern,"Lines, parallel, thin, in furrows and crossing ridges",g_acral,1,DS017,volar,mode=lattice,texture patch (area structure),1/1.0/1,177/401.7/538,0,0.0
+DS018,Parallel furrows pattern,"Lines, parallel, thin, in furrows",g_acral,1,DS018,volar,mode=furrow,texture patch (area structure),1/1.0/1,56/201.2/509,0,0.0
+DS019,Rhomboids / zig-zag pattern,"Lines, angulated or polygonal",g_polygons,1,DS019,facial,rhomb=True,texture patch (area structure),1/1.0/1,39/67.9/126,635,4.0
+DS020,Angulated lines / polygons,"Lines, angulated or polygonal",g_polygons,1,DS020,nonfacial,rhomb=False,texture patch (area structure),1/1.0/1,16/46.3/95,606,3.8
+DS021,(no metaphoric term),"Lines, reticular, white",g_network,1,DS021,,"cell=(18, 26);thr=(1.1, 1.5);alpha=0.55;line=white;cover=0.5",texture patch (area structure),1/1.0/1,54/135.7/249,662,4.1
+DS022,Typical pigment network,(Table II only),g_network,1,network,,"cell=(15, 20);thr=(1.5, 1.9);patchy=False",texture patch (area structure),1/1.0/1,14/42.8/89,651,4.1
+DS023,Starburst pattern,"Pseudopods, circumferential, or lines, radial, circumferential",g_streaks,2,streaks,,"full=True;step=(5, 7);L=(8, 16);bulbs=0.4",single unit,1/1.0/1,12/58.2/108,645,4.0
+DS024,Pseudopods,(Table II only; listed under Streaks),g_streaks,4,streaks,,"kind=pseudopod;L=(10, 20);step=(12, 20)",single unit,0/1.2/2,0/20.8/69,660,4.1
+DS025,Globules,"Clods, small, round or oval",g_blobs,2,globules,,"colour=brown;r=(6, 13);n=(12, 45);blur=1.0",single unit,1/1.0/1,13/23.2/35,654,4.1
+DS026,Rim of brown globules,"Clods, brown, circumferential",g_blobs,2,globules,,"colour=brown;r=(6, 10);n=(14, 30);place=rim;rim_span=(1.0, 1.0);rim_step=(12, 17);inward=11;blur=1.0",single unit,1/1.0/1,1/1.7/3,642,4.0
+DS027,Comedo-like openings,"Clods, brown, yellow, or orange (rarely black)",g_blobs,2,DS027,,"colour=['yellow_orange', 'tan', 'brown'];r=(9, 18);n=(3, 10);core=dark_brown;blur=1.0",single unit,1/1.0/1,3/5.8/9,652,4.1
+DS028,Concentric globules,"Clods, brown or blue, concentric (clod within a clod)",g_spoke,2,DS028,,"concentric=True;colours=('blue_gray', 'brown');n=(2, 6)",single unit,1/1.0/1,2/3.6/5,715,4.5
+DS029,Cobblestone pattern,"Clods, brown or skin-coloured, large and polygonal",g_cobblestone,1,DS029,,,texture patch (area structure),1/1.0/1,1/1.2/3,675,4.2
+DS030,Blue-gray ovoid nests,"Clods, blue, large, clustered",g_blobs,2,DS030,,"colour=blue_gray;r=(18, 34);n=(2, 6);elong=(1.1, 1.6);cover=0.5;alpha=0.75;blur=2.0",single unit,1/1.0/1,1/3.1/5,670,4.2
+DS031,Blue globules,"Clods, blue, small",g_blobs,2,DS031,,"colour=blue;r=(6, 11);n=(6, 22);alpha=0.85;blur=1.1",single unit,1/1.0/1,6/11.2/17,687,4.3
+DS032,Shiny white blotches and strands,"Clods, white, shiny",g_shiny_blotches,4,DS032,,,single unit,1/1.0/1,5/8.2/11,703,4.4
+DS033,Milky-red globules,"Clods, pink and small",g_blobs,2,DS033,,"colour=pink;r=(5, 10);n=(5, 18);alpha=0.8;blur=1.3",single unit,1/1.0/1,5/10.2/16,653,4.1
+DS034,Red lacunes,"Clods, red or purple",g_blobs,2,DS034,,"colour=['red', 'purple'];r=(12, 26);n=(3, 7);elong=(1, 1.6);blur=0.8",single unit,1/1.0/1,3/4.0/6,694,4.3
+DS035,Variant of spoke wheel area,Clod within a clod (concentric clods),g_spoke,2,DS035,,"concentric=True;colours=('brown', 'blue');n=(2, 5)",single unit,1/1.0/1,2/3.0/4,644,4.0
+DS037,Granularity / granules,"Dots, any colour",g_dots,3,globules,,"arr=mixed;n=(80, 300)",single unit,1/1.0/1,67/116.8/219,679,4.2
+DS038,Peppering,"Dots, gray",g_dots,3,DS038,,"colour=gray;r=(2.2, 3.6);n=(120, 420);cover=0.4",single unit,1/1.0/1,44/129.3/187,663,4.1
+DS039,Annular-granular pattern,"Dots, gray and circles, gray",g_dots,3,DS039,,arr=rings,single unit,1/1.0/1,56/82.6/139,656,4.1
+DS040,Milia-like cysts (cloudy or starry),"Dots or clods, white, clustered or disseminated",g_blobs,2,DS040,,"colour=white;r=(4, 10);n=(5, 20);cover=0.6;blur=0.8",single unit,1/1.0/1,4/12.3/19,627,3.9
+DS041,Rosettes,"Dots, white, four arranged in a square",g_dots,3,DS041,,arr=rosette,single unit,1/1.0/1,10/20.2/34,649,4.1
+DS042,Linear dots,"Dots, peripheral, arranged in lines",g_dots,3,DS042,,"arr=rows;colour=brown;r=(2.6, 3.6)",single unit,1/1.0/1,5/24.0/42,666,4.2
+DS043,Targetoid dots,"Dots, brown, central (in hypopigmented spaces between reticular lines)",g_dots,3,DS043,,"arr=target;colour=brown;r=(3, 4.2);n=(10, 35);halo=skin_light",single unit,1/1.0/1,10/19.1/30,657,4.1
+DS045,Circle within a circle,"Circles, concentric",g_rings,2,DS045,,kind=concentric;colour=gray,single unit,1/1.0/1,3/4.2/6,689,4.3
+DS046,Asymmetric pigmented follicular openings,"Circles, incomplete",g_rings,2,DS046,,kind=incomplete,single unit,1/1.0/1,3/6.5/8,668,4.2
+DS047,(no metaphoric term),"Circles, white",g_rings,2,DS047,,kind=white,single unit,1/1.0/1,3/5.7/7,663,4.1
+DS048,Blotch,"Structureless zone, brown or black",g_zone,0,DS048,,"colour=['dark_brown', 'black'];alpha=0.8;size_f=(0.25, 0.5);sigma=6;wob=0.35;ecc=None",single unit,1/1.0/1,1/1.1/2,722,4.5
+DS049,Blue-whitish veil,"Structureless zone, blue",g_zone,0,DS049,,"colour=blue_gray;alpha=0.6;size_f=(0.35, 0.6);sigma=9",single unit,1/1.0/1,1/1.0/1,716,4.5
+DS050,Milky-red areas,"Structureless zone, pink",g_zone,0,DS050,,"colour=pink;alpha=0.6;size_f=(0.3, 0.6);sigma=6",single unit,1/1.0/1,1/1.0/1,716,4.5
+DS051,Scarlike depigmentation,"Structureless zone, white",g_zone,0,DS051,,"colour=white;alpha=0.7;size_f=(0.3, 0.55);sigma=4;wob=0.4",single unit,1/1.0/1,1/1.0/1,652,4.1
+DS052,Central white patch,"Structureless zone, white, central",g_zone,0,DS052,,"colour=white;alpha=0.7;size_f=(0.2, 0.35);offset=0.08;sigma=4;wob=0.3",single unit,1/1.0/1,1/1.0/1,637,4.0
+DS053,Rainbow pattern,"Structureless zone, polychromatic",g_rainbow,0,DS053,,,texture patch (area structure),1/1.0/1,1/1.3/3,670,4.2
+DS054,Strawberry pattern,"Structureless, red, interrupted by follicular openings",g_follicular,0,DS054,facial,mode=strawberry,texture patch (area structure),1/1.0/1,1/1.2/2,696,4.4
+DS055,Homogeneous pattern,"Structureless, any colour",g_homog,0,DS055,,,texture patch (area structure),1/1.0/1,1/1.2/2,695,4.3
+DS056,Pseudonetwork,"Structureless, brown, interrupted by follicular openings",g_follicular,0,DS056,facial,mode=pseudonet,texture patch (area structure),1/1.0/1,1/1.4/4,652,4.1
+DS057,(no metaphoric term),"Structureless, brown (tan), eccentric",g_zone,0,DS057,,"colour=tan;alpha=0.6;size_f=(0.3, 0.55);ecc=True;sigma=7;wob=0.35",single unit,1/1.0/1,1/1.1/2,679,4.2
+DS059,Moth-eaten border,"Sharply demarcated, scalloped border",g_border,0,DS059,,,single unit,0/0.9/1,0/2.7/5,641,4.0
+DS060,(no metaphoric term) [common usage: dotted vessels],"Vessels, dots (tiny pinpoint vessels)",g_vessel,4,vessels,,"gid=DS060;n=(2, 4)",single unit,2/2.3/4,4/9.9/16,654,4.1
+DS061,Red-purple lacunes,"Vessels, clods",g_vessel,4,vessels,,"gid=DS061;n=(1, 1)",single unit,1/1.0/1,1/1.0/1,676,4.2
+DS062,(no metaphoric term),"Vessels, linear",g_vessel,4,vessels,,"gid=DS062;n=(2, 5)",single unit,2/3.8/5,2/3.5/5,669,4.2
+DS063,Glomerular vessels,"Vessels, coiled",g_vessel,4,vessels,,"gid=DS063;n=(1, 1)",single unit,1/1.0/1,1/1.0/1,682,4.3
+DS064,Hairpin vessels,"Vessels, looped",g_vessel,4,vessels,,"gid=DS064;n=(2, 5)",single unit,2/3.8/5,2/3.5/5,656,4.1
+DS065,Linear irregular vessels,"Vessels, serpentine",g_vessel,4,vessels,,"gid=DS065;n=(1, 1)",single unit,1/1.0/1,1/1.1/2,711,4.4
+DS066,Corkscrew vessels,"Vessels, helical",g_vessel,4,vessels,,"gid=DS066;n=(1, 1)",single unit,1/1.0/1,1/1.1/2,680,4.2
+DS067,Comma vessels,"Vessels, curved",g_vessel,4,vessels,,"gid=DS067;n=(2, 5)",single unit,2/2.8/5,2/2.8/5,668,4.2
+DS068,(no metaphoric term),"Vessels, monomorphous",g_vessel_set,4,vessels,,mode=mono,single unit,1/1.0/1,3/5.8/8,703,4.4
+DS069,(no metaphoric term),"Vessels, polymorphous",g_vessel_set,4,vessels,,mode=poly,single unit,1/1.0/1,7/11.7/25,696,4.4
+DS070,Crown vessels,"Vessels, radial",g_vessel,4,vessels,,gid=DS070;ring=True,texture patch (area structure),1/1.0/1,7/8.7/10,628,3.9
+DS071,String of pearls,"Vessels, serpiginous",g_vessel,4,vessels,,"gid=DS071;n=(1, 1)",single unit,1/1.0/1,1/7.7/11,658,4.1
+DS072,Arborizing vessels,"Vessels, branched",g_vessel,4,vessels,,"gid=DS072;n=(1, 1)",single unit,1/1.0/1,1/1.1/2,625,3.9
+DS073,(no metaphoric term),"Vessels, clustered",g_vessel,4,vessels,,"gid=DS073;n=(1, 1)",single unit,1/1.0/1,1/3.0/7,679,4.2
+DS074,Targetoid vessels,"Vessels, centred dots",g_dots,4,vessels,,"arr=target;colour=red;r=(3, 4.2);n=(10, 30);halo=pink",single unit,1/1.0/1,12/21.8/29,638,4.0

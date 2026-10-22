@@ -36,9 +36,10 @@ for k_, v in model.state_dict().items():
 ids = [str(i) for i in ck["ids"]]; nid = len(ids); amap = H.attr_ids(ids)
 
 # data sources
-d = np.load("data/synth_train.npz"); Xs, Rs, Ys = torch.from_numpy(d["images"]), torch.from_numpy(d["regions"]), torch.from_numpy(d["labels"]).float()
-As, ys = H.synth_attr(d["regions"], d["labels"], amap); As, ys = torch.from_numpy(As), torch.from_numpy(ys).float()
-sp_r = H.real_split(); Xr, Ar, _ = H.real_data(sp_r["train"]); Xr, Ar = torch.from_numpy(Xr), torch.from_numpy(Ar)
+d = np.load("data/synth_train.npz"); dv = D.dev                                                                    # Trainingsdaten auf der GPU
+Xs, Rs, Ys = torch.from_numpy(d["images"]).to(dv), torch.from_numpy(d["regions"]).to(dv), torch.from_numpy(d["labels"]).float().to(dv)
+As, ys = H.synth_attr(d["regions"], d["labels"], amap); As, ys = torch.from_numpy(As).to(dv), torch.from_numpy(ys).float().to(dv)
+sp_r = H.real_split(); Xr, Ar, _ = H.real_data(sp_r["train"]); Xr, Ar = torch.from_numpy(Xr).to(dv), torch.from_numpy(Ar).to(dv)
 yr = (Ar.float().mean((2, 3)) / 255. >= .01).float()
 ytr = Y7[train_idx]; posw = ((1 - ytr.mean(0)) / ytr.mean(0).clamp(min=.02)).clamp(1, 6).to(D.dev)
 
@@ -56,12 +57,12 @@ def d7_batch():
 
 for step in range(steps):
     model.train()
-    si = torch.randint(0, len(Xs), (NI,)); ri = torch.randint(0, len(Xr), (NR,)); xd, yd = d7_batch()
+    si = torch.randint(0, len(Xs), (NI,), device=dv); ri = torch.randint(0, len(Xr), (NR,), device=dv); xd, yd = d7_batch(); xd = xd.to(dv)
     x = torch.cat([Xs[si], Xr[ri], xd]); B = len(x)
-    maps = torch.zeros(NI + NR + len(xd), K, 28, 28); maps[:NI, :nid] = Rs[si].float(); maps[:NI, nid:K] = As[si].float(); maps[NI:NI + NR, nid:K] = Ar[ri].float()
+    maps = torch.zeros(NI + NR + len(xd), K, 28, 28, device=dv); maps[:NI, :nid] = Rs[si].float(); maps[:NI, nid:K] = As[si].float(); maps[NI:NI + NR, nid:K] = Ar[ri].float()
     x, maps = D.prep(x, maps, True)
-    yimg = torch.zeros(B, K); yimg[:NI, :nid] = Ys[si]; yimg[:NI, nid:K] = ys[si]; yimg[NI:NI + NR, nid:K] = yr[ri]
-    mask = torch.zeros(B, K); mask[:NI] = 1; mask[NI:NI + NR, nid:K] = 1
+    yimg = torch.zeros(B, K, device=dv); yimg[:NI, :nid] = Ys[si]; yimg[:NI, nid:K] = ys[si]; yimg[NI:NI + NR, nid:K] = yr[ri]
+    mask = torch.zeros(B, K, device=dv); mask[:NI] = 1; mask[NI:NI + NR, nid:K] = 1
     yimg, mask = yimg.to(D.dev), mask.to(D.dev)
     with torch.autocast("cuda", dtype=torch.bfloat16):
         li, lm = model(x)

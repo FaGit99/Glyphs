@@ -1,0 +1,12 @@
+# Glyph pipeline (tested with Python 3.12, CUDA GPU for training)
+torch==2.14.1
+timm==1.0.30
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.0.6
+scikit-learn==1.9.1
+matplotlib==3.11.2
+pillow==12.3.0
+opencv-python-headless==5.0.0.93
+# paper build only (Papers/build_v8/build_v8.py)
+python-docx==1.2.0

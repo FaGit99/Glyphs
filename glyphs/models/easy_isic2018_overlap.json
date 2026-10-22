@@ -1,0 +1,85 @@
+{
+ "method": "dHash 16x16 nearest neighbour of 248 EASY images vs ISIC2018 Task1-2 train/val/test + Task3 inputs, confirmed by 64x64 MAE<=0.3 and identical pixel size",
+ "exact_duplicates": [
+  {
+   "easy": "ISIC_0016153",
+   "isic2018": "ISIC_0014546",
+   "isic2018_part": "train",
+   "project_split": "train"
+  },
+  {
+   "easy": "ISIC_0016080",
+   "isic2018": "ISIC_0014156",
+   "isic2018_part": "train",
+   "project_split": "train"
+  },
+  {
+   "easy": "ISIC_0046471",
+   "isic2018": "ISIC_0000156",
+   "isic2018_part": "train",
+   "project_split": "train"
+  },
+  {
+   "easy": "ISIC_0016162",
+   "isic2018": "ISIC_0014099",
+   "isic2018_part": "train",
+   "project_split": "train"
+  },
+  {
+   "easy": "ISIC_0016085",
+   "isic2018": "ISIC_0014249",
+   "isic2018_part": "train",
+   "project_split": "cal"
+  },
+  {
+   "easy": "ISIC_0016084",
+   "isic2018": "ISIC_0013948",
+   "isic2018_part": "train",
+   "project_split": "test"
+  },
+  {
+   "easy": "ISIC_0023252",
+   "isic2018": "ISIC_0000427",
+   "isic2018_part": "train",
+   "project_split": "test"
+  },
+  {
+   "easy": "ISIC_0021901",
+   "isic2018": "ISIC_0036102",
+   "isic2018_part": "test_input",
+   "project_split": null
+  },
+  {
+   "easy": "ISIC_0021113",
+   "isic2018": "ISIC_0036305",
+   "isic2018_part": "test_input",
+   "project_split": null
+  },
+  {
+   "easy": "ISIC_0021092",
+   "isic2018": "ISIC_0021092",
+   "isic2018_part": "test_input",
+   "project_split": null
+  },
+  {
+   "easy": "ISIC_0021221",
+   "isic2018": "ISIC_0036332",
+   "isic2018_part": "test_input",
+   "project_split": null
+  },
+  {
+   "easy": "ISIC_0021616",
+   "isic2018": "ISIC_0021616",
+   "isic2018_part": "test_input",
+   "project_split": null
+  }
+ ],
+ "id_overlap_only": [
+  "ISIC_0021092",
+  "ISIC_0021616"
+ ],
+ "not_duplicate_checked": [
+  "ISIC_0022328~ISIC_0010597 (MAE 20)",
+  "ISIC_0021894~ISIC_0021893 (MAE 6.5, adjacent id, maybe same lesion)"
+ ]
+}

@@ -35,7 +35,7 @@ llama-server.log
 backbone_study/
 bolt_vllm/
 glyphsbak261019/
-glyphs/SITZUNG_*.md
+glyphs/**/SITZUNG_*.md
 glyphs/MISSION_synthetic_vs_mixed.md
 glyphs/ToDo*.md
 glyphs/logs_mission/

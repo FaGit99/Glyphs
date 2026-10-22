@@ -1,0 +1,22 @@
+{
+ "R 7-point rule, new glyph probabilities (no diagnosis training)": [
+  0.8250875,
+  0.7998218567402612,
+  0.8513025854510003
+ ],
+ "R 7-point rule, old glyph probabilities": [
+  0.587,
+  0.5467049505401034,
+  0.6205119909584564
+ ],
+ "B1 probe on 14 checklist channels (fitted on Derm7pt)": [
+  0.8216500000000001,
+  0.7954723762194047,
+  0.848139729341442
+ ],
+ "D ImageNet-feature probe (fitted on Derm7pt)": [
+  0.60656875,
+  0.5674487939946622,
+  0.646134116665946
+ ]
+}

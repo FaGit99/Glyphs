@@ -10,6 +10,10 @@ calibrated thresholds for the 5 validated ISIC attributes, raw probability >= 0.
 import base64, csv, io, json, sys, time
 import cv2, numpy as np, torch, torch.nn.functional as F
 import dense as D, hybrid as H, lesion_seg as LS, structures as S, diagnosis_map as DM, d7_data as DD, mil, direct_model as DMOD
+try:
+    EASYV = json.load(open("models/easy_validation.json"))   # ID -> Out-of-fold-AUROC auf den EASY-Expertenmasken (nur Bildebene)
+except OSError:
+    EASYV = {}
 
 BAND = 16                      # px at 450-scale = one 14x14 cell, same as in the evaluation
 TILE, STRIDE = 224, 112
@@ -236,7 +240,7 @@ def analyze(path, site=None):
             if sid in lst and nm in M["d7"]:
                 d7 = M["d7"][nm][0]
         items.append(dict(key=sid, name=tax[sid]["Metaphoric term"] if not tax[sid]["Metaphoric term"].startswith("(") else tax[sid]["Descriptive term (IDS)"], sub=tax[sid]["Descriptive term (IDS)"],
-                          status="image" if d7 else "none", d7=d7, prob=float(P[j][reg].max()), p_region=float(P[j][reg].mean()), reg=reg, expect=None))
+                          status="image" if (d7 or EASYV.get(sid, {}).get("auroc_oof", 0) >= .8) else "none", d7=d7, easy=EASYV.get(sid), prob=float(P[j][reg].max()), p_region=float(P[j][reg].mean()), reg=reg, expect=None))
     for it in items:
         r = it["reg"]; n = max(int(r.sum()), 1)
         it["area_px"] = int(r.sum()); it["lesion_cover"] = float((r & (les > 0)).sum() / area_les)
@@ -292,7 +296,7 @@ def html(R):
     layers = [dict(id="zones", label="Randzone (±16 px)", png=png_b64(zo), on=False, swatch="#ffc800"), dict(id="lesion", label="Läsionskontur", png=png_b64(les_ov), on=True, swatch="#ffffff")]
     rows = []
     for it in R["items"]:
-        rows.append(dict(id="s_" + it["key"], key=it["key"], name=it["name"], sub=it["sub"], status=it["status"], d7=it.get("d7"), prob=it["prob"], p_region=it["p_region"],
+        rows.append(dict(id="s_" + it["key"], key=it["key"], name=it["name"], sub=it["sub"], status=it["status"], d7=it.get("d7"), easy=it.get("easy"), prob=it["prob"], p_region=it["p_region"],
                          cover=it["lesion_cover"], area=it["area_px"], zones=it["zones"], flags=it["flags"], weak=it["weak"], diag=it["diag"], color="rgb(%d,%d,%d)" % it["rgb"], png=png_b64(overlay(it["reg"], it["rgb"]))))
     data = json.dumps(dict(w=w, h=h, name=R["name"], layers=layers, rows=rows, warnings=R["warnings"], secs=R["secs"], tiles=R["tiles"], lesion_frac=float(les.mean()), groups=R["group_rows"], check=R["check"], twopath=R["twopath"]), ensure_ascii=False)
     return TEMPLATE.replace("__DATA__", data).replace("__IMG__", img_b64)
@@ -325,7 +329,7 @@ details summary{cursor:pointer;color:var(--mute);font-size:13px;padding:8px 0}
 <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap"><label>Deckkraft <input type="range" id="op" min="10" max="100" value="100"></label><span class="sub">Striche und Flächen pro Struktur im Panel rechts ein- und ausblenden</span></div>
 <div class="legend"><span><b class="c0"></b>Läsionskern</span><span><b class="c1"></b>Randzone (±16 px)</span><span><b class="c2"></b>außerhalb</span></div></div>
 <div><div class="card"><h2>Ebenen</h2><div id="layers"></div></div><div class="card" style="margin-top:12px"><h2>Erkannte Strukturen</h2><div id="main"></div>
-<details><summary id="moreSum"></summary><div id="more"></div></details></div>
+<details open><summary id="moreSum"></summary><div id="more"></div></details></div>
 <div class="card" style="margin-top:12px"><h2>7-Punkte-Checkliste <span class="badge b-image">experimentell, Bildebene</span></h2><div class="d" id="chkNote" style="margin-bottom:6px"></div><div id="chk"></div><div id="chkSum" style="margin-top:8px"></div><div class="d" id="chkInfo" style="margin-top:6px"></div></div>
 <div class="card" style="margin-top:12px"><h2>Zuordnung zu Diagnosegruppen <span class="badge b-image">nur Information, kein Ranking</span></h2>
 <div class="d" style="margin-bottom:6px">Die Zuordnung gibt an, bei welchen Diagnosen eine Struktur laut IDS-Konsens (Kittler 2016) vorkommt, nicht wie spezifisch sie ist. An 1011 Derm7pt-Fällen getestet, trennt eine daraus gebildete Rangfolge die Diagnosen nicht besser als der Zufall (AUC 0,46–0,61). Deshalb werden die Gruppen in fester Reihenfolge und ohne Bewertung gezeigt.</div><div id="groups"></div></div></div></div></div>
@@ -338,11 +342,13 @@ const imgs={};function mk(id,png,on){const i=document.createElement('img');i.cla
 function toggle(id,on){imgs[id].style.display=on?'block':'none'}
 D.layers.forEach(l=>{mk(l.id,l.png,l.on);const r=document.createElement('div');r.className='row';r.innerHTML=`<span class="sw" style="background:${l.swatch}"></span><label><input type="checkbox" ${l.on?'checked':''}> ${l.label}</label>`;r.querySelector('input').onchange=e=>toggle(l.id,e.target.checked);$('#layers').append(r)});
 const STAT={region:['Region validiert (ISIC-Masken)','b-region'],image:['nur Bildebene geprüft','b-image'],none:['nicht validiert','b-none']};
-function row(r){mk(r.id,r.png,r.status==='region'&&!r.weak);const e=document.createElement('div');e.className='row';const st=STAT[r.status];const weak=r.weak?'<span class="badge b-image">schwacher Hinweis</span>':'';
+const topMore=new Set(D.rows.filter(r=>r.status!=='region'||r.weak).sort((p,q)=>q.prob-p.prob).slice(0,3).filter(r=>r.prob>=.85).map(r=>r.id));
+const isOn=r=>(r.status==='region'&&!r.weak)||topMore.has(r.id);
+function row(r){mk(r.id,r.png,isOn(r));const e=document.createElement('div');e.className='row';const st=STAT[r.status];const weak=r.weak?'<span class="badge b-image">schwacher Hinweis</span>':'';
 const z=r.zones.map((v,i)=>`<i class="c${i}" style="width:${v*100}%"></i>`).join('');
 const pr=r.status==='region'?`Wahrscheinlichkeit (kalibriert) max ${(r.prob*100).toFixed(0)} %`:`Modellsicherheit ${r.prob>=.85?'hoch':r.prob>=.65?'mittel':'niedrig'} (unkalibriert, keine Wahrscheinlichkeit)`;
-const extra=r.status==='image'&&r.d7?` · Derm7pt-AUC ${r.d7.toFixed(2)}`:'';
-e.innerHTML=`<span class="sw" style="background:${r.color}"></span><div><label><input type="checkbox" ${r.status==='region'&&!r.weak?'checked':''}> <span class="nm">${r.name}</span></label><span class="badge ${st[1]}">${st[0]}${extra}</span>${weak}<div class="d">${r.sub}</div>
+const extra=(r.status==='image'&&r.d7?` · Derm7pt-AUC ${r.d7.toFixed(2)}`:'')+(r.easy?` · EASY-AUROC ${r.easy.auroc_oof.toFixed(2)}`:'');
+e.innerHTML=`<span class="sw" style="background:${r.color}"></span><div><label><input type="checkbox" ${isOn(r)?'checked':''}> <span class="nm">${r.name}</span></label><span class="badge ${st[1]}">${st[0]}${extra}</span>${weak}<div class="d">${r.sub}</div>
 <div class="d">${pr} · ${(r.cover*100).toFixed(0)} % der Läsionsfläche</div><div class="d">Laut IDS-Konsens vorkommend bei: ${r.diag.length?r.diag.join(', '):'keine spezifische Zuordnung in der Quelle'}</div><div class="bar" title="Kern / Rand / außerhalb">${z}</div>
 <div class="d">Kern ${(r.zones[0]*100).toFixed(0)} % · Rand ${(r.zones[1]*100).toFixed(0)} % · außerhalb ${(r.zones[2]*100).toFixed(0)} %</div>${r.flags.map(f=>`<div class="flag">${f}</div>`).join('')}</div>`;
 e.querySelector('input').onchange=x=>toggle(r.id,x.target.checked);return e}
@@ -369,12 +375,13 @@ $('#tp').innerHTML=`<h2>Zwei unabhängige Wege <span class="badge b-image">exper
 <div class="d">Höher als ${gp.toFixed(0)} % der benignen Referenzbilder · Hinweisgrenze 90. Perzentil → <b>${T.g_high?'auffällig':'unauffällig'}</b></div>
 <div class="d">Erwartungswert 7-Punkte-Checkliste: ${D.check.expected.toFixed(1)} von 9.</div><div class="d" style="margin-top:6px"><b>Hauptbeiträge zum Glyphen-Score</b> (nur Kanäle über 50 %):</div>${T.drivers.length?T.drivers.slice(0,5).map(x=>`<div class="d">· ${x.name} <span style="opacity:.8">(${x.detail})</span></div>`).join(''):'<div class="d">· kein einzelner Kanal über 50 %</div>'}</div></div>
 <div style="background:${col[0]};color:${col[1]};border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:12px"><b>${msg[1]}</b><div style="font-size:13.5px;margin-top:3px">${msg[2]}</div></div>
-<div class="d" style="margin-top:8px">Die beiden Wege sind unabhängig trainiert und werden bewusst nicht verrechnet: eine Fusion verbesserte die Genauigkeit des Direktmodells im Test praktisch nicht (AUROC '+(E.fusion?E.fusion.direct_auc.toFixed(4).replace('.',',')+' → '+E.fusion.two_stage_auc.toFixed(4).replace('.',','):'0,9675 → 0,9691')+'). Der Glyphenweg liefert die Erklärung und den Abweichungshinweis. Nur für Dermoskopiebilder; die Schwellen stammen aus dem v17-Datensatz.</div>`;})();
+<div class="d" style="margin-top:8px">Die beiden Wege sind unabhängig trainiert und werden bewusst nicht verrechnet: eine Fusion verbesserte die Genauigkeit des Direktmodells im Test praktisch nicht (AUROC ${E.fusion?E.fusion.direct_auc.toFixed(4).replace('.',',')+' → '+E.fusion.two_stage_auc.toFixed(4).replace('.',','):'0,9675 → 0,9691'}). Der Glyphenweg liefert die Erklärung und den Abweichungshinweis. Nur für Dermoskopiebilder; die Schwellen stammen aus dem v17-Datensatz.</div>`;})();
 const C=D.check;
 $('#chkNote').textContent=`Klassische Rechenregel (Argenziano) auf den vom Modell geschätzten Kriterien. Wahrscheinlichkeiten sind auf Derm7pt kalibriert und gelten für den Bildinhalt insgesamt (${C.n_tiles} Kacheln der Läsion); die markierten Bildbereiche zeigen nur, welche Kacheln am stärksten beitrugen, nicht eine geprüfte Lokalisierung.`;
-C.rows.forEach(r=>{mk(r.id,r.png,false);const e=document.createElement('div');e.className='row';const rel=r.reliable?'':'<span class="badge b-none">wenige Validierungsfälle</span>';
+const topIds=new Set([...C.rows].sort((p,q)=>q.prob-p.prob).slice(0,3).filter(r=>r.prob>=.05).map(r=>r.id));
+C.rows.forEach(r=>{mk(r.id,r.png,topIds.has(r.id));const e=document.createElement('div');e.className='row';const rel=r.reliable?'':'<span class="badge b-none">wenige Validierungsfälle</span>';
 const auc=r.auc.filter(x=>x!=null).length?` · Test-AUC ${Math.min(...r.auc.filter(x=>x!=null)).toFixed(2)}`:'';
-e.innerHTML=`<span class="sw" style="background:${r.rgb}"></span><div><label><input type="checkbox"> <span class="nm">${r.label}</span></label><span class="badge b-region">${r.weight} Punkt${r.weight>1?'e':''}</span>${rel}
+e.innerHTML=`<span class="sw" style="background:${r.rgb}"></span><div><label><input type="checkbox" ${topIds.has(r.id)?'checked':''}> <span class="nm">${r.label}</span></label><span class="badge b-region">${r.weight} Punkt${r.weight>1?'e':''}</span>${rel}
 <div class="bar" style="height:10px"><i style="width:${r.prob*100}%;background:${r.rgb}"></i></div><div class="d">Wahrscheinlichkeit (kalibriert) ${(r.prob*100).toFixed(0)} % · Beitrag ${r.contrib.toFixed(2)} Punkte${auc}</div></div>`;
 e.querySelector('input').onchange=x=>toggle(r.id,x.target.checked);$('#chk').append(e)});
 $('#chkSum').innerHTML=`<div class="nm">Erwartungswert ${C.expected.toFixed(1)} von 9 Punkten</div><div class="d">Bei Kriterien mit ≥ 50 %: ${C.points} Punkte. Die klassische Schwelle „≥ 3 Punkte“ wird hier bewusst nicht als Urteil gezeigt: sie übertrug sich nicht auf externe Daten (siehe unten).</div>`;

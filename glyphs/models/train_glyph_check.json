@@ -1,0 +1,2004 @@
+{
+ "min_cells": 3,
+ "thresholds": "ID raw 0.5, attributes calibrated",
+ "isic2018": {
+  "n_images": 2594,
+  "split_counts": {
+   "train": 1575,
+   "cal": 519,
+   "test": 500
+  },
+  "attr": {
+   "pigment_network": {
+    "train (seen)": {
+     "n": 1575,
+     "gt_pos": 908,
+     "detected": 961,
+     "tp": 847,
+     "fp": 114,
+     "fn": 61,
+     "sens": 0.9328193832599119,
+     "spec": 0.8290854572713643
+    },
+    "cal+test (held out)": {
+     "n": 1019,
+     "gt_pos": 610,
+     "detected": 676,
+     "tp": 558,
+     "fp": 118,
+     "fn": 52,
+     "sens": 0.9147540983606557,
+     "spec": 0.7114914425427873
+    }
+   },
+   "negative_network": {
+    "train (seen)": {
+     "n": 1575,
+     "gt_pos": 99,
+     "detected": 154,
+     "tp": 89,
+     "fp": 65,
+     "fn": 10,
+     "sens": 0.898989898989899,
+     "spec": 0.9559620596205962
+    },
+    "cal+test (held out)": {
+     "n": 1019,
+     "gt_pos": 90,
+     "detected": 112,
+     "tp": 59,
+     "fp": 53,
+     "fn": 31,
+     "sens": 0.6555555555555556,
+     "spec": 0.9429494079655544
+    }
+   },
+   "streaks": {
+    "train (seen)": {
+     "n": 1575,
+     "gt_pos": 54,
+     "detected": 81,
+     "tp": 42,
+     "fp": 39,
+     "fn": 12,
+     "sens": 0.7777777777777778,
+     "spec": 0.9743589743589743
+    },
+    "cal+test (held out)": {
+     "n": 1019,
+     "gt_pos": 45,
+     "detected": 58,
+     "tp": 28,
+     "fp": 30,
+     "fn": 17,
+     "sens": 0.6222222222222222,
+     "spec": 0.9691991786447639
+    }
+   },
+   "milia_like_cyst": {
+    "train (seen)": {
+     "n": 1575,
+     "gt_pos": 404,
+     "detected": 516,
+     "tp": 277,
+     "fp": 239,
+     "fn": 127,
+     "sens": 0.6856435643564357,
+     "spec": 0.7959009393680615
+    },
+    "cal+test (held out)": {
+     "n": 1019,
+     "gt_pos": 272,
+     "detected": 339,
+     "tp": 171,
+     "fp": 168,
+     "fn": 101,
+     "sens": 0.6286764705882353,
+     "spec": 0.7751004016064257
+    }
+   },
+   "globules": {
+    "train (seen)": {
+     "n": 1575,
+     "gt_pos": 369,
+     "detected": 468,
+     "tp": 310,
+     "fp": 158,
+     "fn": 59,
+     "sens": 0.8401084010840109,
+     "spec": 0.8689883913764511
+    },
+    "cal+test (held out)": {
+     "n": 1019,
+     "gt_pos": 232,
+     "detected": 357,
+     "tp": 196,
+     "fp": 161,
+     "fn": 36,
+     "sens": 0.8448275862068966,
+     "spec": 0.795425667090216
+    }
+   }
+  },
+  "id": {
+   "DS001": {
+    "name": "Pigment network",
+    "n_det": 39,
+    "share": 0.015034695451040863,
+    "kind": "id->attr",
+    "easy_validated": null,
+    "mean_score_det": 0.68115234375,
+    "attr": "pigment_network",
+    "consistent": 39,
+    "contradicts": 0,
+    "dx_of_detected": {
+     "?": 32,
+     "MEL": 1,
+     "NV": 6
+    }
+   },
+   "DS002": {
+    "name": "Delicate network",
+    "n_det": 312,
+    "share": 0.1202775636083269,
+    "kind": "id->attr",
+    "easy_validated": 0.7897282358360203,
+    "mean_score_det": 0.7641022801399231,
+    "attr": "pigment_network",
+    "consistent": 282,
+    "contradicts": 30,
+    "dx_of_detected": {
+     "?": 211,
+     "MEL": 14,
+     "NV": 87
+    }
+   },
+   "DS003": {
+    "name": "Broadened network",
+    "n_det": 363,
+    "share": 0.13993831919814959,
+    "kind": "id->attr",
+    "easy_validated": 0.8598765432098765,
+    "mean_score_det": 0.7901009321212769,
+    "attr": "pigment_network",
+    "consistent": 344,
+    "contradicts": 19,
+    "dx_of_detected": {
+     "?": 251,
+     "MEL": 21,
+     "NV": 91
+    }
+   },
+   "DS004": {
+    "name": "Atypical pigment network",
+    "n_det": 1507,
+    "share": 0.5809560524286815,
+    "kind": "id->attr",
+    "easy_validated": 0.9198531922157733,
+    "mean_score_det": 0.9312430620193481,
+    "attr": "pigment_network",
+    "consistent": 1258,
+    "contradicts": 249,
+    "dx_of_detected": {
+     "?": 1004,
+     "MEL": 116,
+     "NV": 387
+    }
+   },
+   "DS005": {
+    "name": "Negative pigment network",
+    "n_det": 244,
+    "share": 0.09406322282189669,
+    "kind": "id->attr",
+    "easy_validated": 0.9351765073414557,
+    "mean_score_det": 0.8757244348526001,
+    "attr": "negative_network",
+    "consistent": 141,
+    "contradicts": 103,
+    "dx_of_detected": {
+     "?": 158,
+     "MEL": 22,
+     "NV": 64
+    }
+   },
+   "DS006": {
+    "name": "Shiny white streaks",
+    "n_det": 123,
+    "share": 0.04741711642251349,
+    "kind": "id_new",
+    "easy_validated": 0.9296508066162957,
+    "mean_score_det": 0.837688148021698,
+    "dx_of_detected": {
+     "?": 92,
+     "MEL": 12,
+     "NV": 19
+    }
+   },
+   "DS007": {
+    "name": "Branched streaks",
+    "n_det": 5,
+    "share": 0.0019275250578257518,
+    "kind": "id_new",
+    "easy_validated": 0.607397504456328,
+    "mean_score_det": 0.674121081829071,
+    "dx_of_detected": {
+     "?": 3,
+     "NV": 2
+    }
+   },
+   "DS008": {
+    "name": "Streaks",
+    "n_det": 2,
+    "share": 0.0007710100231303007,
+    "kind": "id->attr",
+    "easy_validated": null,
+    "mean_score_det": 0.654052734375,
+    "attr": "streaks",
+    "consistent": 2,
+    "contradicts": 0,
+    "dx_of_detected": {
+     "?": 1,
+     "NV": 1
+    }
+   },
+   "DS009": {
+    "name": "Radial streaming",
+    "n_det": 96,
+    "share": 0.03700848111025443,
+    "kind": "id->attr",
+    "easy_validated": 0.9653883652908677,
+    "mean_score_det": 0.8370310664176941,
+    "attr": "streaks",
+    "consistent": 55,
+    "contradicts": 41,
+    "dx_of_detected": {
+     "?": 54,
+     "MEL": 19,
+     "NV": 23
+    }
+   },
+   "DS010": {
+    "name": "Leaflike areas",
+    "n_det": 19,
+    "share": 0.007324595219737857,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.8067948222160339,
+    "dx_of_detected": {
+     "?": 15,
+     "MEL": 3,
+     "NV": 1
+    }
+   },
+   "DS011": {
+    "name": "Spoke wheel area",
+    "n_det": 5,
+    "share": 0.0019275250578257518,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.685742199420929,
+    "dx_of_detected": {
+     "?": 3,
+     "NV": 2
+    }
+   },
+   "DS012": {
+    "name": "Cerebriform pattern",
+    "n_det": 17,
+    "share": 0.0065535851966075555,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7998621463775635,
+    "dx_of_detected": {
+     "?": 10,
+     "MEL": 1,
+     "NV": 6
+    }
+   },
+   "DS013": {
+    "name": "Fingerprinting",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS014": {
+    "name": "Crypts",
+    "n_det": 254,
+    "share": 0.09791827293754819,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7540196776390076,
+    "dx_of_detected": {
+     "?": 160,
+     "MEL": 19,
+     "NV": 75
+    }
+   },
+   "DS015": {
+    "name": "Fibrillar pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS016": {
+    "name": "Parallel ridge pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS017": {
+    "name": "Latticelike pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS018": {
+    "name": "Parallel furrows pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS019": {
+    "name": "Rhomboids / zig-zag pattern",
+    "n_det": 1,
+    "share": 0.00038550501156515033,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.5439453125,
+    "dx_of_detected": {
+     "NV": 1
+    }
+   },
+   "DS020": {
+    "name": "Angulated lines / polygons",
+    "n_det": 112,
+    "share": 0.04317656129529684,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7363542914390564,
+    "dx_of_detected": {
+     "?": 50,
+     "MEL": 8,
+     "NV": 54
+    }
+   },
+   "DS021": {
+    "name": "Lines, reticular, white",
+    "n_det": 94,
+    "share": 0.036237471087124135,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7776554226875305,
+    "dx_of_detected": {
+     "?": 78,
+     "MEL": 5,
+     "NV": 11
+    }
+   },
+   "DS022": {
+    "name": "Typical pigment network",
+    "n_det": 1231,
+    "share": 0.4745566692367001,
+    "kind": "id->attr",
+    "easy_validated": 0.9506650784196943,
+    "mean_score_det": 0.9184439182281494,
+    "attr": "pigment_network",
+    "consistent": 1091,
+    "contradicts": 140,
+    "dx_of_detected": {
+     "?": 846,
+     "MEL": 56,
+     "NV": 329
+    }
+   },
+   "DS023": {
+    "name": "Starburst pattern",
+    "n_det": 42,
+    "share": 0.016191210485736313,
+    "kind": "id_new",
+    "easy_validated": 0.9971301020408163,
+    "mean_score_det": 0.8666062355041504,
+    "dx_of_detected": {
+     "?": 22,
+     "MEL": 9,
+     "NV": 11
+    }
+   },
+   "DS024": {
+    "name": "Pseudopods",
+    "n_det": 53,
+    "share": 0.020431765612952967,
+    "kind": "id->attr",
+    "easy_validated": 0.9501110406091371,
+    "mean_score_det": 0.7949771285057068,
+    "attr": "streaks",
+    "consistent": 28,
+    "contradicts": 25,
+    "dx_of_detected": {
+     "?": 29,
+     "MEL": 11,
+     "NV": 13
+    }
+   },
+   "DS025": {
+    "name": "Globules",
+    "n_det": 1120,
+    "share": 0.4317656129529684,
+    "kind": "id->attr",
+    "easy_validated": 0.8913161220436902,
+    "mean_score_det": 0.8900717496871948,
+    "attr": "globules",
+    "consistent": 527,
+    "contradicts": 593,
+    "dx_of_detected": {
+     "?": 713,
+     "MEL": 93,
+     "NV": 314
+    }
+   },
+   "DS026": {
+    "name": "Rim of brown globules",
+    "n_det": 125,
+    "share": 0.04818812644564379,
+    "kind": "id->attr",
+    "easy_validated": 0.9867164798671648,
+    "mean_score_det": 0.8380703330039978,
+    "attr": "globules",
+    "consistent": 118,
+    "contradicts": 7,
+    "dx_of_detected": {
+     "?": 70,
+     "MEL": 5,
+     "NV": 50
+    }
+   },
+   "DS027": {
+    "name": "Comedo-like openings",
+    "n_det": 3,
+    "share": 0.001156515034695451,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6622721552848816,
+    "dx_of_detected": {
+     "?": 3
+    }
+   },
+   "DS028": {
+    "name": "Concentric globules",
+    "n_det": 2,
+    "share": 0.0007710100231303007,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7021484375,
+    "dx_of_detected": {
+     "?": 1,
+     "MEL": 1
+    }
+   },
+   "DS029": {
+    "name": "Cobblestone pattern",
+    "n_det": 152,
+    "share": 0.058596761757902856,
+    "kind": "id_new",
+    "easy_validated": 0.921765601217656,
+    "mean_score_det": 0.8696545958518982,
+    "dx_of_detected": {
+     "?": 105,
+     "MEL": 6,
+     "NV": 41
+    }
+   },
+   "DS030": {
+    "name": "Blue-gray ovoid nests",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS031": {
+    "name": "Blue globules",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS032": {
+    "name": "Shiny white blotches and strands",
+    "n_det": 13,
+    "share": 0.0050115651503469544,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6984675526618958,
+    "dx_of_detected": {
+     "?": 11,
+     "NV": 2
+    }
+   },
+   "DS033": {
+    "name": "Milky-red globules",
+    "n_det": 5,
+    "share": 0.0019275250578257518,
+    "kind": "id_new",
+    "easy_validated": 0.8923633969716919,
+    "mean_score_det": 0.73779296875,
+    "dx_of_detected": {
+     "?": 3,
+     "NV": 2
+    }
+   },
+   "DS034": {
+    "name": "Red lacunes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS035": {
+    "name": "Variant of spoke wheel area",
+    "n_det": 1,
+    "share": 0.00038550501156515033,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.5888671875,
+    "dx_of_detected": {
+     "NV": 1
+    }
+   },
+   "DS037": {
+    "name": "Granularity / granules",
+    "n_det": 840,
+    "share": 0.3238242097147263,
+    "kind": "id->attr",
+    "easy_validated": 0.8365645194913488,
+    "mean_score_det": 0.8395223021507263,
+    "attr": "globules",
+    "consistent": 401,
+    "contradicts": 439,
+    "dx_of_detected": {
+     "?": 567,
+     "MEL": 58,
+     "NV": 215
+    }
+   },
+   "DS038": {
+    "name": "Peppering",
+    "n_det": 639,
+    "share": 0.24633770239013106,
+    "kind": "id_new",
+    "easy_validated": 0.922360248447205,
+    "mean_score_det": 0.8807883262634277,
+    "dx_of_detected": {
+     "?": 366,
+     "MEL": 87,
+     "NV": 186
+    }
+   },
+   "DS039": {
+    "name": "Annular-granular pattern",
+    "n_det": 9,
+    "share": 0.003469545104086353,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6661784052848816,
+    "dx_of_detected": {
+     "?": 1,
+     "MEL": 2,
+     "NV": 6
+    }
+   },
+   "DS040": {
+    "name": "Milia-like cysts (cloudy or starry)",
+    "n_det": 73,
+    "share": 0.028141865844255976,
+    "kind": "id->attr",
+    "easy_validated": null,
+    "mean_score_det": 0.7827081680297852,
+    "attr": "milia_like_cyst",
+    "consistent": 70,
+    "contradicts": 3,
+    "dx_of_detected": {
+     "?": 48,
+     "MEL": 2,
+     "NV": 23
+    }
+   },
+   "DS041": {
+    "name": "Rosettes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS042": {
+    "name": "Linear dots",
+    "n_det": 45,
+    "share": 0.017347725520431765,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6980794072151184,
+    "dx_of_detected": {
+     "?": 22,
+     "MEL": 5,
+     "NV": 18
+    }
+   },
+   "DS043": {
+    "name": "Targetoid dots",
+    "n_det": 2,
+    "share": 0.0007710100231303007,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.65771484375,
+    "dx_of_detected": {
+     "?": 2
+    }
+   },
+   "DS045": {
+    "name": "Circle within a circle",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS046": {
+    "name": "Asymmetric pigmented follicular openings",
+    "n_det": 4,
+    "share": 0.0015420200462606013,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7362060546875,
+    "dx_of_detected": {
+     "?": 2,
+     "NV": 2
+    }
+   },
+   "DS047": {
+    "name": "Circles, white",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS048": {
+    "name": "Blotch",
+    "n_det": 492,
+    "share": 0.18966846569005397,
+    "kind": "id_new",
+    "easy_validated": 0.8772428229665071,
+    "mean_score_det": 0.9186843037605286,
+    "dx_of_detected": {
+     "?": 379,
+     "MEL": 39,
+     "NV": 74
+    }
+   },
+   "DS049": {
+    "name": "Blue-whitish veil",
+    "n_det": 335,
+    "share": 0.12914417887432536,
+    "kind": "id_new",
+    "easy_validated": 0.9668035190615836,
+    "mean_score_det": 0.9387068748474121,
+    "dx_of_detected": {
+     "?": 212,
+     "MEL": 48,
+     "NV": 75
+    }
+   },
+   "DS050": {
+    "name": "Milky-red areas",
+    "n_det": 188,
+    "share": 0.07247494217424827,
+    "kind": "id_new",
+    "easy_validated": 0.9432043650793651,
+    "mean_score_det": 0.8513520956039429,
+    "dx_of_detected": {
+     "?": 138,
+     "MEL": 20,
+     "NV": 30
+    }
+   },
+   "DS051": {
+    "name": "Scarlike depigmentation",
+    "n_det": 10,
+    "share": 0.0038550501156515036,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.765429675579071,
+    "dx_of_detected": {
+     "?": 8,
+     "MEL": 2
+    }
+   },
+   "DS052": {
+    "name": "Central white patch",
+    "n_det": 4,
+    "share": 0.0015420200462606013,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.8211669921875,
+    "dx_of_detected": {
+     "?": 3,
+     "MEL": 1
+    }
+   },
+   "DS053": {
+    "name": "Rainbow pattern",
+    "n_det": 1086,
+    "share": 0.41865844255975326,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.851062536239624,
+    "dx_of_detected": {
+     "?": 641,
+     "MEL": 108,
+     "NV": 337
+    }
+   },
+   "DS054": {
+    "name": "Strawberry pattern",
+    "n_det": 89,
+    "share": 0.034309946029298384,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.8375449776649475,
+    "dx_of_detected": {
+     "?": 72,
+     "NV": 17
+    }
+   },
+   "DS055": {
+    "name": "Homogeneous pattern",
+    "n_det": 182,
+    "share": 0.07016191210485737,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.795241117477417,
+    "dx_of_detected": {
+     "?": 105,
+     "MEL": 15,
+     "NV": 62
+    }
+   },
+   "DS056": {
+    "name": "Pseudonetwork",
+    "n_det": 200,
+    "share": 0.07710100231303008,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.809399425983429,
+    "dx_of_detected": {
+     "?": 141,
+     "MEL": 13,
+     "NV": 46
+    }
+   },
+   "DS057": {
+    "name": "Structureless, brown (tan), eccentric",
+    "n_det": 247,
+    "share": 0.09521973785659213,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7752542495727539,
+    "dx_of_detected": {
+     "?": 206,
+     "MEL": 13,
+     "NV": 28
+    }
+   },
+   "DS059": {
+    "name": "Moth-eaten border",
+    "n_det": 9,
+    "share": 0.003469545104086353,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7152777910232544,
+    "dx_of_detected": {
+     "?": 8,
+     "MEL": 1
+    }
+   },
+   "DS060": {
+    "name": "Vessels, dots (tiny pinpoint vessels)",
+    "n_det": 227,
+    "share": 0.08750963762528913,
+    "kind": "id_new",
+    "easy_validated": 0.8981347599768652,
+    "mean_score_det": 0.8497298359870911,
+    "dx_of_detected": {
+     "?": 176,
+     "MEL": 11,
+     "NV": 40
+    }
+   },
+   "DS061": {
+    "name": "Red-purple lacunes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS062": {
+    "name": "Vessels, linear",
+    "n_det": 1,
+    "share": 0.00038550501156515033,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.73388671875,
+    "dx_of_detected": {
+     "?": 1
+    }
+   },
+   "DS063": {
+    "name": "Glomerular vessels",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS064": {
+    "name": "Hairpin vessels",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS065": {
+    "name": "Linear irregular vessels",
+    "n_det": 146,
+    "share": 0.05628373168851195,
+    "kind": "id_new",
+    "easy_validated": 0.955955334987593,
+    "mean_score_det": 0.8219245076179504,
+    "dx_of_detected": {
+     "?": 116,
+     "MEL": 8,
+     "NV": 22
+    }
+   },
+   "DS066": {
+    "name": "Corkscrew vessels",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS067": {
+    "name": "Comma vessels",
+    "n_det": 59,
+    "share": 0.02274479568234387,
+    "kind": "id_new",
+    "easy_validated": 0.9554924242424242,
+    "mean_score_det": 0.7516965866088867,
+    "dx_of_detected": {
+     "?": 32,
+     "MEL": 4,
+     "NV": 23
+    }
+   },
+   "DS068": {
+    "name": "Vessels, monomorphous",
+    "n_det": 39,
+    "share": 0.015034695451040863,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6970277428627014,
+    "dx_of_detected": {
+     "?": 29,
+     "MEL": 2,
+     "NV": 8
+    }
+   },
+   "DS069": {
+    "name": "Vessels, polymorphous",
+    "n_det": 224,
+    "share": 0.08635312259059368,
+    "kind": "id_new",
+    "easy_validated": 0.9731983702571938,
+    "mean_score_det": 0.8726676106452942,
+    "dx_of_detected": {
+     "?": 169,
+     "MEL": 18,
+     "NV": 37
+    }
+   },
+   "DS070": {
+    "name": "Crown vessels",
+    "n_det": 2,
+    "share": 0.0007710100231303007,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.55322265625,
+    "dx_of_detected": {
+     "?": 2
+    }
+   },
+   "DS071": {
+    "name": "String of pearls",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS072": {
+    "name": "Arborizing vessels",
+    "n_det": 25,
+    "share": 0.00963762528912876,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6706836223602295,
+    "dx_of_detected": {
+     "?": 22,
+     "MEL": 1,
+     "NV": 2
+    }
+   },
+   "DS073": {
+    "name": "Vessels, clustered",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS074": {
+    "name": "Targetoid vessels",
+    "n_det": 1,
+    "share": 0.00038550501156515033,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.63330078125,
+    "dx_of_detected": {
+     "?": 1
+    }
+   }
+  },
+  "dx_counts": {
+   "?": 1822,
+   "MEL": 164,
+   "NV": 608
+  }
+ },
+ "easy": {
+  "n_images": 248,
+  "dup_with_isic2018_train": [
+   "ISIC_0016080",
+   "ISIC_0016084",
+   "ISIC_0016085",
+   "ISIC_0016153",
+   "ISIC_0016162",
+   "ISIC_0021092",
+   "ISIC_0021113",
+   "ISIC_0021221",
+   "ISIC_0021616",
+   "ISIC_0021901",
+   "ISIC_0023252",
+   "ISIC_0046471"
+  ],
+  "id": {
+   "DS001": {
+    "name": "Pigment network",
+    "n_det": 6,
+    "share": 0.024193548387096774,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.627197265625,
+    "dx_of_detected": {
+     "melanoma": 2,
+     "nevus": 4
+    }
+   },
+   "DS002": {
+    "name": "Delicate network",
+    "n_det": 21,
+    "share": 0.0846774193548387,
+    "kind": "easy_trained",
+    "easy_validated": 0.7897282358360203,
+    "mean_score_det": 0.8159644603729248,
+    "readers2": 15,
+    "readers1": 6,
+    "readers0": 0,
+    "gt_pos": 26,
+    "missed": 11,
+    "dx_of_detected": {
+     "melanoma": 6,
+     "nevus": 15
+    }
+   },
+   "DS003": {
+    "name": "Broadened network",
+    "n_det": 42,
+    "share": 0.1693548387096774,
+    "kind": "easy_trained",
+    "easy_validated": 0.8598765432098765,
+    "mean_score_det": 0.8491094708442688,
+    "readers2": 26,
+    "readers1": 16,
+    "readers0": 0,
+    "gt_pos": 35,
+    "missed": 9,
+    "dx_of_detected": {
+     "melanoma": 20,
+     "nevus": 22
+    }
+   },
+   "DS004": {
+    "name": "Atypical pigment network",
+    "n_det": 115,
+    "share": 0.4637096774193548,
+    "kind": "easy_trained",
+    "easy_validated": 0.9198531922157733,
+    "mean_score_det": 0.954789400100708,
+    "readers2": 99,
+    "readers1": 15,
+    "readers0": 1,
+    "gt_pos": 101,
+    "missed": 2,
+    "dx_of_detected": {
+     "melanoma": 79,
+     "nevus": 36
+    }
+   },
+   "DS005": {
+    "name": "Negative pigment network",
+    "n_det": 35,
+    "share": 0.14112903225806453,
+    "kind": "easy_trained",
+    "easy_validated": 0.9351765073414557,
+    "mean_score_det": 0.9061523675918579,
+    "readers2": 28,
+    "readers1": 6,
+    "readers0": 1,
+    "gt_pos": 33,
+    "missed": 5,
+    "dx_of_detected": {
+     "dermatofibroma": 1,
+     "melanoma": 28,
+     "melanoma metastasis": 1,
+     "nevus": 5
+    }
+   },
+   "DS006": {
+    "name": "Shiny white streaks",
+    "n_det": 55,
+    "share": 0.2217741935483871,
+    "kind": "easy_trained",
+    "easy_validated": 0.9296508066162957,
+    "mean_score_det": 0.9275479316711426,
+    "readers2": 50,
+    "readers1": 5,
+    "readers0": 0,
+    "gt_pos": 59,
+    "missed": 9,
+    "dx_of_detected": {
+     "dermatofibroma": 1,
+     "melanoma": 43,
+     "melanoma metastasis": 2,
+     "nevus": 9
+    }
+   },
+   "DS007": {
+    "name": "Branched streaks",
+    "n_det": 3,
+    "share": 0.012096774193548387,
+    "kind": "easy_trained",
+    "easy_validated": 0.607397504456328,
+    "mean_score_det": 0.7586262822151184,
+    "readers2": 3,
+    "readers1": 0,
+    "readers0": 0,
+    "gt_pos": 18,
+    "missed": 15,
+    "dx_of_detected": {
+     "melanoma": 2,
+     "nevus": 1
+    }
+   },
+   "DS008": {
+    "name": "Streaks",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6279296875,
+    "dx_of_detected": {
+     "melanoma": 1
+    }
+   },
+   "DS009": {
+    "name": "Radial streaming",
+    "n_det": 33,
+    "share": 0.13306451612903225,
+    "kind": "easy_trained",
+    "easy_validated": 0.9653883652908677,
+    "mean_score_det": 0.9094460010528564,
+    "readers2": 27,
+    "readers1": 6,
+    "readers0": 0,
+    "gt_pos": 34,
+    "missed": 7,
+    "dx_of_detected": {
+     "melanoma": 17,
+     "nevus": 16
+    }
+   },
+   "DS010": {
+    "name": "Leaflike areas",
+    "n_det": 7,
+    "share": 0.028225806451612902,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7102399468421936,
+    "dx_of_detected": {
+     "melanoma": 7
+    }
+   },
+   "DS011": {
+    "name": "Spoke wheel area",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS012": {
+    "name": "Cerebriform pattern",
+    "n_det": 3,
+    "share": 0.012096774193548387,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.62890625,
+    "dx_of_detected": {
+     "melanoma": 1,
+     "nevus": 2
+    }
+   },
+   "DS013": {
+    "name": "Fingerprinting",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS014": {
+    "name": "Crypts",
+    "n_det": 22,
+    "share": 0.08870967741935484,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7533292174339294,
+    "dx_of_detected": {
+     "melanoma": 12,
+     "nevus": 10
+    }
+   },
+   "DS015": {
+    "name": "Fibrillar pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS016": {
+    "name": "Parallel ridge pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS017": {
+    "name": "Latticelike pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS018": {
+    "name": "Parallel furrows pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS019": {
+    "name": "Rhomboids / zig-zag pattern",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "easy_skip",
+    "easy_validated": null,
+    "mean_score_det": 0.55517578125,
+    "readers2": 0,
+    "readers1": 1,
+    "readers0": 0,
+    "gt_pos": 21,
+    "missed": 21,
+    "dx_of_detected": {
+     "nevus": 1
+    }
+   },
+   "DS020": {
+    "name": "Angulated lines / polygons",
+    "n_det": 11,
+    "share": 0.04435483870967742,
+    "kind": "easy_skip",
+    "easy_validated": null,
+    "mean_score_det": 0.7148881554603577,
+    "readers2": 0,
+    "readers1": 1,
+    "readers0": 10,
+    "gt_pos": 21,
+    "missed": 21,
+    "dx_of_detected": {
+     "melanoma": 6,
+     "nevus": 5
+    }
+   },
+   "DS021": {
+    "name": "Lines, reticular, white",
+    "n_det": 19,
+    "share": 0.07661290322580645,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.7676551938056946,
+    "dx_of_detected": {
+     "melanoma": 17,
+     "nevus": 2
+    }
+   },
+   "DS022": {
+    "name": "Typical pigment network",
+    "n_det": 85,
+    "share": 0.34274193548387094,
+    "kind": "easy_trained",
+    "easy_validated": 0.9506650784196943,
+    "mean_score_det": 0.9485466480255127,
+    "readers2": 66,
+    "readers1": 16,
+    "readers0": 3,
+    "gt_pos": 69,
+    "missed": 3,
+    "dx_of_detected": {
+     "melanoma": 33,
+     "nevus": 52
+    }
+   },
+   "DS023": {
+    "name": "Starburst pattern",
+    "n_det": 23,
+    "share": 0.09274193548387097,
+    "kind": "easy_trained",
+    "easy_validated": 0.9971301020408163,
+    "mean_score_det": 0.90187668800354,
+    "readers2": 14,
+    "readers1": 8,
+    "readers0": 1,
+    "gt_pos": 14,
+    "missed": 0,
+    "dx_of_detected": {
+     "melanoma": 8,
+     "nevus": 15
+    }
+   },
+   "DS024": {
+    "name": "Pseudopods",
+    "n_det": 29,
+    "share": 0.11693548387096774,
+    "kind": "easy_trained",
+    "easy_validated": 0.9501110406091371,
+    "mean_score_det": 0.8694268465042114,
+    "readers2": 25,
+    "readers1": 4,
+    "readers0": 0,
+    "gt_pos": 32,
+    "missed": 7,
+    "dx_of_detected": {
+     "melanoma": 13,
+     "nevus": 16
+    }
+   },
+   "DS025": {
+    "name": "Globules",
+    "n_det": 117,
+    "share": 0.4717741935483871,
+    "kind": "easy_trained",
+    "easy_validated": 0.8913161220436902,
+    "mean_score_det": 0.9025440812110901,
+    "readers2": 94,
+    "readers1": 21,
+    "readers0": 2,
+    "gt_pos": 108,
+    "missed": 14,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 65,
+     "melanoma metastasis": 2,
+     "nevus": 49
+    }
+   },
+   "DS026": {
+    "name": "Rim of brown globules",
+    "n_det": 11,
+    "share": 0.04435483870967742,
+    "kind": "easy_trained",
+    "easy_validated": 0.9867164798671648,
+    "mean_score_det": 0.9497957825660706,
+    "readers2": 10,
+    "readers1": 1,
+    "readers0": 0,
+    "gt_pos": 11,
+    "missed": 1,
+    "dx_of_detected": {
+     "melanoma": 2,
+     "nevus": 9
+    }
+   },
+   "DS027": {
+    "name": "Comedo-like openings",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS028": {
+    "name": "Concentric globules",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS029": {
+    "name": "Cobblestone pattern",
+    "n_det": 17,
+    "share": 0.06854838709677419,
+    "kind": "easy_trained",
+    "easy_validated": 0.921765601217656,
+    "mean_score_det": 0.9291704893112183,
+    "readers2": 14,
+    "readers1": 2,
+    "readers0": 1,
+    "gt_pos": 15,
+    "missed": 1,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 2,
+     "nevus": 14
+    }
+   },
+   "DS030": {
+    "name": "Blue-gray ovoid nests",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS031": {
+    "name": "Blue globules",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS032": {
+    "name": "Shiny white blotches and strands",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS033": {
+    "name": "Milky-red globules",
+    "n_det": 3,
+    "share": 0.012096774193548387,
+    "kind": "easy_trained",
+    "easy_validated": 0.8923633969716919,
+    "mean_score_det": 0.7265625,
+    "readers2": 3,
+    "readers1": 0,
+    "readers0": 0,
+    "gt_pos": 7,
+    "missed": 4,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma metastasis": 1,
+     "nevus": 1
+    }
+   },
+   "DS034": {
+    "name": "Red lacunes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS035": {
+    "name": "Variant of spoke wheel area",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS037": {
+    "name": "Granularity / granules",
+    "n_det": 89,
+    "share": 0.3588709677419355,
+    "kind": "easy_trained",
+    "easy_validated": 0.8365645194913488,
+    "mean_score_det": 0.8736668229103088,
+    "readers2": 77,
+    "readers1": 12,
+    "readers0": 0,
+    "gt_pos": 101,
+    "missed": 24,
+    "dx_of_detected": {
+     "melanoma": 49,
+     "nevus": 40
+    }
+   },
+   "DS038": {
+    "name": "Peppering",
+    "n_det": 63,
+    "share": 0.2540322580645161,
+    "kind": "easy_trained",
+    "easy_validated": 0.922360248447205,
+    "mean_score_det": 0.9204179048538208,
+    "readers2": 53,
+    "readers1": 9,
+    "readers0": 1,
+    "gt_pos": 69,
+    "missed": 16,
+    "dx_of_detected": {
+     "melanoma": 50,
+     "melanoma metastasis": 1,
+     "nevus": 12
+    }
+   },
+   "DS039": {
+    "name": "Annular-granular pattern",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS040": {
+    "name": "Milia-like cysts (cloudy or starry)",
+    "n_det": 3,
+    "share": 0.012096774193548387,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.84912109375,
+    "dx_of_detected": {
+     "nevus": 3
+    }
+   },
+   "DS041": {
+    "name": "Rosettes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS042": {
+    "name": "Linear dots",
+    "n_det": 11,
+    "share": 0.04435483870967742,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.74609375,
+    "dx_of_detected": {
+     "melanoma": 6,
+     "nevus": 5
+    }
+   },
+   "DS043": {
+    "name": "Targetoid dots",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS045": {
+    "name": "Circle within a circle",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS046": {
+    "name": "Asymmetric pigmented follicular openings",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS047": {
+    "name": "Circles, white",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS048": {
+    "name": "Blotch",
+    "n_det": 81,
+    "share": 0.32661290322580644,
+    "kind": "easy_trained",
+    "easy_validated": 0.8772428229665071,
+    "mean_score_det": 0.959514856338501,
+    "readers2": 60,
+    "readers1": 20,
+    "readers0": 1,
+    "gt_pos": 68,
+    "missed": 8,
+    "dx_of_detected": {
+     "melanoma": 50,
+     "melanoma metastasis": 1,
+     "nevus": 30
+    }
+   },
+   "DS049": {
+    "name": "Blue-whitish veil",
+    "n_det": 61,
+    "share": 0.24596774193548387,
+    "kind": "easy_trained",
+    "easy_validated": 0.9668035190615836,
+    "mean_score_det": 0.9608734846115112,
+    "readers2": 47,
+    "readers1": 13,
+    "readers0": 1,
+    "gt_pos": 55,
+    "missed": 8,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 41,
+     "melanoma metastasis": 2,
+     "nevus": 17
+    }
+   },
+   "DS050": {
+    "name": "Milky-red areas",
+    "n_det": 55,
+    "share": 0.2217741935483871,
+    "kind": "easy_trained",
+    "easy_validated": 0.9432043650793651,
+    "mean_score_det": 0.9373934864997864,
+    "readers2": 45,
+    "readers1": 7,
+    "readers0": 3,
+    "gt_pos": 48,
+    "missed": 3,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 44,
+     "melanoma metastasis": 4,
+     "nevus": 6
+    }
+   },
+   "DS051": {
+    "name": "Scarlike depigmentation",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "easy_skip",
+    "easy_validated": null,
+    "mean_score_det": 0.85400390625,
+    "readers2": 0,
+    "readers1": 1,
+    "readers0": 0,
+    "gt_pos": 40,
+    "missed": 40,
+    "dx_of_detected": {
+     "nevus": 1
+    }
+   },
+   "DS052": {
+    "name": "Central white patch",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.81640625,
+    "dx_of_detected": {
+     "melanoma": 1
+    }
+   },
+   "DS053": {
+    "name": "Rainbow pattern",
+    "n_det": 110,
+    "share": 0.4435483870967742,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.840363085269928,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 76,
+     "melanoma metastasis": 2,
+     "nevus": 31
+    }
+   },
+   "DS054": {
+    "name": "Strawberry pattern",
+    "n_det": 15,
+    "share": 0.06048387096774194,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.8306966423988342,
+    "dx_of_detected": {
+     "melanoma": 3,
+     "nevus": 12
+    }
+   },
+   "DS055": {
+    "name": "Homogeneous pattern",
+    "n_det": 22,
+    "share": 0.08870967741935484,
+    "kind": "easy_skip",
+    "easy_validated": null,
+    "mean_score_det": 0.7508655786514282,
+    "readers2": 3,
+    "readers1": 5,
+    "readers0": 14,
+    "gt_pos": 17,
+    "missed": 14,
+    "dx_of_detected": {
+     "melanoma": 1,
+     "nevus": 21
+    }
+   },
+   "DS056": {
+    "name": "Pseudonetwork",
+    "n_det": 8,
+    "share": 0.03225806451612903,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.79913330078125,
+    "dx_of_detected": {
+     "melanoma": 5,
+     "nevus": 3
+    }
+   },
+   "DS057": {
+    "name": "Structureless, brown (tan), eccentric",
+    "n_det": 24,
+    "share": 0.0967741935483871,
+    "kind": "easy_skip",
+    "easy_validated": null,
+    "mean_score_det": 0.7894287109375,
+    "readers2": 10,
+    "readers1": 6,
+    "readers0": 8,
+    "gt_pos": 79,
+    "missed": 69,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 18,
+     "melanoma metastasis": 1,
+     "nevus": 4
+    }
+   },
+   "DS059": {
+    "name": "Moth-eaten border",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.95166015625,
+    "dx_of_detected": {
+     "melanoma": 1
+    }
+   },
+   "DS060": {
+    "name": "Vessels, dots (tiny pinpoint vessels)",
+    "n_det": 27,
+    "share": 0.10887096774193548,
+    "kind": "easy_trained",
+    "easy_validated": 0.8981347599768652,
+    "mean_score_det": 0.9030309319496155,
+    "readers2": 25,
+    "readers1": 1,
+    "readers0": 1,
+    "gt_pos": 38,
+    "missed": 13,
+    "dx_of_detected": {
+     "dermatofibroma": 1,
+     "melanoma": 15,
+     "nevus": 11
+    }
+   },
+   "DS061": {
+    "name": "Red-purple lacunes",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS062": {
+    "name": "Vessels, linear",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS063": {
+    "name": "Glomerular vessels",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS064": {
+    "name": "Hairpin vessels",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.55078125,
+    "dx_of_detected": {
+     "melanoma": 1
+    }
+   },
+   "DS065": {
+    "name": "Linear irregular vessels",
+    "n_det": 39,
+    "share": 0.15725806451612903,
+    "kind": "easy_trained",
+    "easy_validated": 0.955955334987593,
+    "mean_score_det": 0.9163536429405212,
+    "readers2": 33,
+    "readers1": 6,
+    "readers0": 0,
+    "gt_pos": 39,
+    "missed": 6,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 29,
+     "melanoma metastasis": 3,
+     "nevus": 6
+    }
+   },
+   "DS066": {
+    "name": "Corkscrew vessels",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "easy_trained",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "readers2": 0,
+    "readers1": 0,
+    "readers0": 0,
+    "gt_pos": 3,
+    "missed": 3,
+    "dx_of_detected": {}
+   },
+   "DS067": {
+    "name": "Comma vessels",
+    "n_det": 10,
+    "share": 0.04032258064516129,
+    "kind": "easy_trained",
+    "easy_validated": 0.9554924242424242,
+    "mean_score_det": 0.910351574420929,
+    "readers2": 9,
+    "readers1": 1,
+    "readers0": 0,
+    "gt_pos": 12,
+    "missed": 3,
+    "dx_of_detected": {
+     "melanoma": 1,
+     "nevus": 9
+    }
+   },
+   "DS068": {
+    "name": "Vessels, monomorphous",
+    "n_det": 29,
+    "share": 0.11693548387096774,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.744292140007019,
+    "dx_of_detected": {
+     "melanoma": 22,
+     "melanoma metastasis": 3,
+     "nevus": 4
+    }
+   },
+   "DS069": {
+    "name": "Vessels, polymorphous",
+    "n_det": 55,
+    "share": 0.2217741935483871,
+    "kind": "easy_trained",
+    "easy_validated": 0.9731983702571938,
+    "mean_score_det": 0.950390636920929,
+    "readers2": 40,
+    "readers1": 12,
+    "readers0": 3,
+    "gt_pos": 42,
+    "missed": 2,
+    "dx_of_detected": {
+     "AIMP": 1,
+     "melanoma": 39,
+     "melanoma metastasis": 3,
+     "nevus": 12
+    }
+   },
+   "DS070": {
+    "name": "Crown vessels",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.61572265625,
+    "dx_of_detected": {
+     "nevus": 1
+    }
+   },
+   "DS071": {
+    "name": "String of pearls",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS072": {
+    "name": "Arborizing vessels",
+    "n_det": 13,
+    "share": 0.05241935483870968,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.6073843240737915,
+    "dx_of_detected": {
+     "melanoma": 11,
+     "melanoma metastasis": 2
+    }
+   },
+   "DS073": {
+    "name": "Vessels, clustered",
+    "n_det": 0,
+    "share": 0.0,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": null,
+    "dx_of_detected": {}
+   },
+   "DS074": {
+    "name": "Targetoid vessels",
+    "n_det": 1,
+    "share": 0.004032258064516129,
+    "kind": "id_new",
+    "easy_validated": null,
+    "mean_score_det": 0.74169921875,
+    "dx_of_detected": {
+     "melanoma": 1
+    }
+   }
+  },
+  "attr": {
+   "pigment_network": {
+    "n_det": 145,
+    "readers2": 134,
+    "readers1": 6,
+    "readers0": 5,
+    "gt_pos": 141,
+    "missed": 7
+   },
+   "negative_network": {
+    "n_det": 37,
+    "readers2": 28,
+    "readers1": 6,
+    "readers0": 3,
+    "gt_pos": 33,
+    "missed": 5
+   },
+   "streaks": {
+    "n_det": 47,
+    "readers2": 41,
+    "readers1": 6,
+    "readers0": 0,
+    "gt_pos": 58,
+    "missed": 17
+   },
+   "milia_like_cyst": {
+    "n_det": 39,
+    "readers2": 0,
+    "readers1": 0,
+    "readers0": 39,
+    "gt_pos": 0,
+    "missed": 0
+   },
+   "globules": {
+    "n_det": 109,
+    "readers2": 102,
+    "readers1": 7,
+    "readers0": 0,
+    "gt_pos": 152,
+    "missed": 50
+   }
+  },
+  "dx_counts": {
+   "AIMP": 1,
+   "dermatofibroma": 1,
+   "melanoma": 129,
+   "melanoma metastasis": 4,
+   "nevus": 113
+  }
+ }
+}

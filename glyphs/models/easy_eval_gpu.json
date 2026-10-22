@@ -1,0 +1,846 @@
+{
+ "Dots : Irregular": {
+  "DS037": {
+   "n_pos": 78,
+   "n_neg": 123,
+   "image_auroc": 0.7116948092557849,
+   "ci": [
+    0.6462023986198082,
+    0.7732446993668616
+   ],
+   "generic_auroc": 0.6395663956639567,
+   "rank_of_76": 2,
+   "best_channel": "DS049",
+   "best_auroc": 0.7171148634563269,
+   "pointing": 0.6410256410256411,
+   "pointing_chance_in_annotated_region": 0.3119133281558214,
+   "n_pointing": 78,
+   "cell_auroc_in_annotated_region": 0.7130931999454801
+  },
+  "globules*": {
+   "n_pos": 78,
+   "n_neg": 123,
+   "image_auroc": 0.6787575568063373,
+   "ci": [
+    0.6171500086577945,
+    0.7461912090618075
+   ],
+   "generic_auroc": 0.6395663956639567,
+   "rank_of_76": 6,
+   "best_channel": "DS049",
+   "best_auroc": 0.7171148634563269,
+   "pointing": 0.5584415584415584,
+   "pointing_chance_in_annotated_region": 0.30314175052142894,
+   "n_pointing": 77,
+   "cell_auroc_in_annotated_region": 0.7016077680497298
+  }
+ },
+ "Dots : Regular": {
+  "DS037": {
+   "n_pos": 28,
+   "n_neg": 183,
+   "image_auroc": 0.6572014051522248,
+   "ci": [
+    0.5517374755620723,
+    0.7651763774333564
+   ],
+   "generic_auroc": 0.4373536299765808,
+   "rank_of_76": 7,
+   "best_channel": "DS002",
+   "best_auroc": 0.7765417642466823,
+   "pointing": 0.6071428571428571,
+   "pointing_chance_in_annotated_region": 0.3597890474130217,
+   "n_pointing": 28,
+   "cell_auroc_in_annotated_region": 0.7448938169851163
+  },
+  "globules*": {
+   "n_pos": 28,
+   "n_neg": 183,
+   "image_auroc": 0.5941647150663544,
+   "ci": [
+    0.47693660684612826,
+    0.7069967532467533
+   ],
+   "generic_auroc": 0.4373536299765808,
+   "rank_of_76": 8,
+   "best_channel": "DS002",
+   "best_auroc": 0.7765417642466823,
+   "pointing": 0.6785714285714286,
+   "pointing_chance_in_annotated_region": 0.36465642108583296,
+   "n_pointing": 28,
+   "cell_auroc_in_annotated_region": 0.7168074390676481
+  }
+ },
+ "Globules / Clods : Cobblestone pattern": {
+  "DS029": {
+   "n_pos": 15,
+   "n_neg": 219,
+   "image_auroc": 0.5767123287671233,
+   "ci": [
+    0.42259167093415273,
+    0.7170150162337662
+   ],
+   "generic_auroc": 0.6188736681887367,
+   "rank_of_76": 39,
+   "best_channel": "DS025",
+   "best_auroc": 0.8550989345509894,
+   "pointing": 0.8666666666666667,
+   "pointing_chance_in_annotated_region": 0.7483283237656214,
+   "n_pointing": 15,
+   "cell_auroc_in_annotated_region": 0.5988549175998066
+  },
+  "globules*": {
+   "n_pos": 15,
+   "n_neg": 219,
+   "image_auroc": 0.8438356164383561,
+   "ci": [
+    0.7423428731762065,
+    0.9526631083137931
+   ],
+   "generic_auroc": 0.6188736681887367,
+   "rank_of_76": 2,
+   "best_channel": "DS025",
+   "best_auroc": 0.8550989345509894,
+   "pointing": 0.8,
+   "pointing_chance_in_annotated_region": 0.7357747459305722,
+   "n_pointing": 15,
+   "cell_auroc_in_annotated_region": 0.6864602760379529
+  }
+ },
+ "Globules / Clods : Irregular": {
+  "DS025": {
+   "n_pos": 87,
+   "n_neg": 98,
+   "image_auroc": 0.7756274923762608,
+   "ci": [
+    0.7082868237656509,
+    0.8416205128205129
+   ],
+   "generic_auroc": 0.7377433732113535,
+   "rank_of_76": 1,
+   "best_channel": "DS025",
+   "best_auroc": 0.7756274923762608,
+   "pointing": 0.6823529411764706,
+   "pointing_chance_in_annotated_region": 0.38311939418153823,
+   "n_pointing": 85,
+   "cell_auroc_in_annotated_region": 0.7415112454765319
+  },
+  "globules*": {
+   "n_pos": 87,
+   "n_neg": 98,
+   "image_auroc": 0.7675932441942294,
+   "ci": [
+    0.6923135277842725,
+    0.8322890372800167
+   ],
+   "generic_auroc": 0.7377433732113535,
+   "rank_of_76": 3,
+   "best_channel": "DS025",
+   "best_auroc": 0.7756274923762608,
+   "pointing": 0.7619047619047619,
+   "pointing_chance_in_annotated_region": 0.39443500899600664,
+   "n_pointing": 84,
+   "cell_auroc_in_annotated_region": 0.7638530487879399
+  }
+ },
+ "Globules / Clods : Milky red": {
+  "DS033": {
+   "n_pos": 7,
+   "n_neg": 217,
+   "image_auroc": 0.6175115207373272,
+   "ci": [
+    0.3838296001480933,
+    0.8333587921055517
+   ],
+   "generic_auroc": 0.7412771560236998,
+   "rank_of_76": 46,
+   "best_channel": "DS053",
+   "best_auroc": 0.9591836734693877,
+   "pointing": 0.8571428571428571,
+   "pointing_chance_in_annotated_region": 0.41014747470164464,
+   "n_pointing": 7,
+   "cell_auroc_in_annotated_region": 0.6777965497512214
+  },
+  "globules*": {
+   "n_pos": 7,
+   "n_neg": 217,
+   "image_auroc": 0.6109282422646478,
+   "ci": [
+    0.4067422472387426,
+    0.7814657953164927
+   ],
+   "generic_auroc": 0.7412771560236998,
+   "rank_of_76": 47,
+   "best_channel": "DS053",
+   "best_auroc": 0.9591836734693877,
+   "pointing": 0.42857142857142855,
+   "pointing_chance_in_annotated_region": 0.4340921925791066,
+   "n_pointing": 7,
+   "cell_auroc_in_annotated_region": 0.5417642709434813
+  }
+ },
+ "Globules / Clods : Regular": {
+  "DS025": {
+   "n_pos": 29,
+   "n_neg": 191,
+   "image_auroc": 0.7553710055966781,
+   "ci": [
+    0.6478655133928571,
+    0.8494289413786696
+   ],
+   "generic_auroc": 0.5623758801227658,
+   "rank_of_76": 3,
+   "best_channel": "DS037",
+   "best_auroc": 0.8377866040801589,
+   "pointing": 0.896551724137931,
+   "pointing_chance_in_annotated_region": 0.6305876141693179,
+   "n_pointing": 29,
+   "cell_auroc_in_annotated_region": 0.8276724325116144
+  },
+  "globules*": {
+   "n_pos": 29,
+   "n_neg": 191,
+   "image_auroc": 0.8172955407113197,
+   "ci": [
+    0.7249560895313765,
+    0.8937109841696536
+   ],
+   "generic_auroc": 0.5623758801227658,
+   "rank_of_76": 2,
+   "best_channel": "DS037",
+   "best_auroc": 0.8377866040801589,
+   "pointing": 0.8928571428571429,
+   "pointing_chance_in_annotated_region": 0.6282734314259303,
+   "n_pointing": 28,
+   "cell_auroc_in_annotated_region": 0.8760041433066839
+  }
+ },
+ "Globules / Clods : Rim of brown globules": {
+  "DS026": {
+   "n_pos": 11,
+   "n_neg": 219,
+   "image_auroc": 0.910958904109589,
+   "ci": [
+    0.864535017033543,
+    0.9459778574023009
+   ],
+   "generic_auroc": 0.7920298879202988,
+   "rank_of_76": 3,
+   "best_channel": "DS042",
+   "best_auroc": 0.9582814445828145,
+   "pointing": 1.0,
+   "pointing_chance_in_annotated_region": 0.5447785876429779,
+   "n_pointing": 11,
+   "cell_auroc_in_annotated_region": 0.8525897400911387
+  },
+  "globules*": {
+   "n_pos": 11,
+   "n_neg": 219,
+   "image_auroc": 0.9202988792029888,
+   "ci": [
+    0.8817346323031807,
+    0.9570415628891656
+   ],
+   "generic_auroc": 0.7920298879202988,
+   "rank_of_76": 2,
+   "best_channel": "DS042",
+   "best_auroc": 0.9582814445828145,
+   "pointing": 0.8181818181818182,
+   "pointing_chance_in_annotated_region": 0.4718938746978585,
+   "n_pointing": 11,
+   "cell_auroc_in_annotated_region": 0.757090460569509
+  }
+ },
+ "Lines : Angulated lines / Polygons / Zig-zag pattern": {
+  "DS019,DS020": {
+   "n_pos": 21,
+   "n_neg": 218,
+   "image_auroc": 0.3607470511140236,
+   "ci": [
+    0.24211966957189607,
+    0.48355377906976743
+   ],
+   "generic_auroc": 0.35561380515508956,
+   "rank_of_76": null,
+   "best_channel": "DS012",
+   "best_auroc": 0.6248361730013107,
+   "pointing": 0.47368421052631576,
+   "pointing_chance_in_annotated_region": 0.3824066923012226,
+   "n_pointing": 19,
+   "cell_auroc_in_annotated_region": 0.5297618765872677
+  }
+ },
+ "Lines : Branched streaks": {
+  "DS007": {
+   "n_pos": 18,
+   "n_neg": 187,
+   "image_auroc": 0.46642899584076053,
+   "ci": [
+    0.320217883418223,
+    0.6181230865354574
+   ],
+   "generic_auroc": 0.49732620320855614,
+   "rank_of_76": 42,
+   "best_channel": "DS004",
+   "best_auroc": 0.744503862150921,
+   "pointing": 0.4375,
+   "pointing_chance_in_annotated_region": 0.27029406071236617,
+   "n_pointing": 16,
+   "cell_auroc_in_annotated_region": 0.499472549627536
+  },
+  "streaks*": {
+   "n_pos": 18,
+   "n_neg": 187,
+   "image_auroc": 0.5347593582887701,
+   "ci": [
+    0.3910857524828113,
+    0.6761707740361227
+   ],
+   "generic_auroc": 0.49732620320855614,
+   "rank_of_76": 23,
+   "best_channel": "DS004",
+   "best_auroc": 0.744503862150921,
+   "pointing": 0.35294117647058826,
+   "pointing_chance_in_annotated_region": 0.22593729688842643,
+   "n_pointing": 17,
+   "cell_auroc_in_annotated_region": 0.5793123040600142
+  }
+ },
+ "Lines : Pseudopods": {
+  "DS024": {
+   "n_pos": 32,
+   "n_neg": 197,
+   "image_auroc": 0.9593115482233503,
+   "ci": [
+    0.919436953609701,
+    0.9883263516702059
+   ],
+   "generic_auroc": 0.8546954314720813,
+   "rank_of_76": 1,
+   "best_channel": "DS024",
+   "best_auroc": 0.9593115482233503,
+   "pointing": 0.7407407407407407,
+   "pointing_chance_in_annotated_region": 0.3528373458788486,
+   "n_pointing": 27,
+   "cell_auroc_in_annotated_region": 0.8311405339987198
+  },
+  "streaks*": {
+   "n_pos": 32,
+   "n_neg": 197,
+   "image_auroc": 0.9528870558375635,
+   "ci": [
+    0.9056151586508729,
+    0.9865237297264947
+   ],
+   "generic_auroc": 0.8546954314720813,
+   "rank_of_76": 2,
+   "best_channel": "DS024",
+   "best_auroc": 0.9593115482233503,
+   "pointing": 0.7777777777777778,
+   "pointing_chance_in_annotated_region": 0.33683672214373217,
+   "n_pointing": 27,
+   "cell_auroc_in_annotated_region": 0.8144472220146516
+  }
+ },
+ "Lines : Radial streaming": {
+  "DS009": {
+   "n_pos": 34,
+   "n_neg": 181,
+   "image_auroc": 0.9393890152746182,
+   "ci": [
+    0.8971674740551145,
+    0.971659356283658
+   ],
+   "generic_auroc": 0.8051673708157296,
+   "rank_of_76": 2,
+   "best_channel": "streaks",
+   "best_auroc": 0.9447513812154696,
+   "pointing": 0.8235294117647058,
+   "pointing_chance_in_annotated_region": 0.4592996247574157,
+   "n_pointing": 34,
+   "cell_auroc_in_annotated_region": 0.8072188924984295
+  },
+  "streaks*": {
+   "n_pos": 34,
+   "n_neg": 181,
+   "image_auroc": 0.9447513812154696,
+   "ci": [
+    0.9003814657353983,
+    0.9783731331738145
+   ],
+   "generic_auroc": 0.8051673708157296,
+   "rank_of_76": 1,
+   "best_channel": "streaks",
+   "best_auroc": 0.9447513812154696,
+   "pointing": 0.8529411764705882,
+   "pointing_chance_in_annotated_region": 0.4420655187611655,
+   "n_pointing": 34,
+   "cell_auroc_in_annotated_region": 0.7970365724506845
+  }
+ },
+ "Network : Atypical pigment network / Reticulation": {
+  "DS004": {
+   "n_pos": 101,
+   "n_neg": 116,
+   "image_auroc": 0.8534909525435302,
+   "ci": [
+    0.7995974903278503,
+    0.892771508028384
+   ],
+   "generic_auroc": 0.5667463298053943,
+   "rank_of_76": 1,
+   "best_channel": "DS004",
+   "best_auroc": 0.8534909525435302,
+   "pointing": 0.7623762376237624,
+   "pointing_chance_in_annotated_region": 0.48872586681454433,
+   "n_pointing": 101,
+   "cell_auroc_in_annotated_region": 0.7557860788630041
+  },
+  "pigment_network*": {
+   "n_pos": 101,
+   "n_neg": 116,
+   "image_auroc": 0.8175145100716968,
+   "ci": [
+    0.7553456658500438,
+    0.8802750398310815
+   ],
+   "generic_auroc": 0.5667463298053943,
+   "rank_of_76": 2,
+   "best_channel": "DS004",
+   "best_auroc": 0.8534909525435302,
+   "pointing": 0.8585858585858586,
+   "pointing_chance_in_annotated_region": 0.5586247889019494,
+   "n_pointing": 99,
+   "cell_auroc_in_annotated_region": 0.8273729073510528
+  }
+ },
+ "Network : Broadened pigment network / Reticulation": {
+  "DS003": {
+   "n_pos": 35,
+   "n_neg": 162,
+   "image_auroc": 0.8572310405643739,
+   "ci": [
+    0.8041983419387265,
+    0.9053826728826728
+   ],
+   "generic_auroc": 0.5754850088183422,
+   "rank_of_76": 3,
+   "best_channel": "DS004",
+   "best_auroc": 0.8940035273368606,
+   "pointing": 0.7878787878787878,
+   "pointing_chance_in_annotated_region": 0.37258296992545453,
+   "n_pointing": 33,
+   "cell_auroc_in_annotated_region": 0.727044180545797
+  },
+  "pigment_network*": {
+   "n_pos": 35,
+   "n_neg": 162,
+   "image_auroc": 0.8749559082892416,
+   "ci": [
+    0.8197673225894782,
+    0.9150453813353522
+   ],
+   "generic_auroc": 0.5754850088183422,
+   "rank_of_76": 2,
+   "best_channel": "DS004",
+   "best_auroc": 0.8940035273368606,
+   "pointing": 0.7272727272727273,
+   "pointing_chance_in_annotated_region": 0.4180033794204691,
+   "n_pointing": 33,
+   "cell_auroc_in_annotated_region": 0.7455709520626039
+  }
+ },
+ "Network : Delicate Pigment Network / Reticulation": {
+  "DS002": {
+   "n_pos": 26,
+   "n_neg": 167,
+   "image_auroc": 0.6380700138185168,
+   "ci": [
+    0.5456562427342478,
+    0.7263180678970153
+   ],
+   "generic_auroc": 0.2699216950713957,
+   "rank_of_76": 3,
+   "best_channel": "pigment_network",
+   "best_auroc": 0.7675034546292031,
+   "pointing": 0.6666666666666666,
+   "pointing_chance_in_annotated_region": 0.4937582704863211,
+   "n_pointing": 24,
+   "cell_auroc_in_annotated_region": 0.6368341396943827
+  },
+  "pigment_network*": {
+   "n_pos": 26,
+   "n_neg": 167,
+   "image_auroc": 0.7675034546292031,
+   "ci": [
+    0.701965005778945,
+    0.8298656813534113
+   ],
+   "generic_auroc": 0.2699216950713957,
+   "rank_of_76": 1,
+   "best_channel": "pigment_network",
+   "best_auroc": 0.7675034546292031,
+   "pointing": 0.6086956521739131,
+   "pointing_chance_in_annotated_region": 0.47337502354277444,
+   "n_pointing": 23,
+   "cell_auroc_in_annotated_region": 0.7087766069879277
+  }
+ },
+ "Network : Negative pigment network": {
+  "DS005": {
+   "n_pos": 33,
+   "n_neg": 194,
+   "image_auroc": 0.869181505779444,
+   "ci": [
+    0.7879730012224866,
+    0.9366297750266048
+   ],
+   "generic_auroc": 0.6460481099656358,
+   "rank_of_76": 1,
+   "best_channel": "DS005",
+   "best_auroc": 0.869181505779444,
+   "pointing": 0.8709677419354839,
+   "pointing_chance_in_annotated_region": 0.3897482773379422,
+   "n_pointing": 31,
+   "cell_auroc_in_annotated_region": 0.8131487918302527
+  },
+  "negative_network*": {
+   "n_pos": 33,
+   "n_neg": 194,
+   "image_auroc": 0.8610590440487348,
+   "ci": [
+    0.7818687140804598,
+    0.9334220855772579
+   ],
+   "generic_auroc": 0.6460481099656358,
+   "rank_of_76": 2,
+   "best_channel": "DS005",
+   "best_auroc": 0.869181505779444,
+   "pointing": 0.8387096774193549,
+   "pointing_chance_in_annotated_region": 0.3901882623455149,
+   "n_pointing": 31,
+   "cell_auroc_in_annotated_region": 0.8176922776656971
+  }
+ },
+ "Network : Typical pigment network / Reticulation": {
+  "DS022": {
+   "n_pos": 69,
+   "n_neg": 146,
+   "image_auroc": 0.8462874727020052,
+   "ci": [
+    0.7963480125031233,
+    0.8931668671363384
+   ],
+   "generic_auroc": 0.3638078221163391,
+   "rank_of_76": 5,
+   "best_channel": "pigment_network",
+   "best_auroc": 0.9427238435576732,
+   "pointing": 0.8840579710144928,
+   "pointing_chance_in_annotated_region": 0.6588837823774027,
+   "n_pointing": 69,
+   "cell_auroc_in_annotated_region": 0.7187692654499501
+  },
+  "pigment_network*": {
+   "n_pos": 69,
+   "n_neg": 146,
+   "image_auroc": 0.9427238435576732,
+   "ci": [
+    0.9140471194680702,
+    0.9684583884723906
+   ],
+   "generic_auroc": 0.3638078221163391,
+   "rank_of_76": 1,
+   "best_channel": "pigment_network",
+   "best_auroc": 0.9427238435576732,
+   "pointing": 0.9130434782608695,
+   "pointing_chance_in_annotated_region": 0.6882961601932898,
+   "n_pointing": 69,
+   "cell_auroc_in_annotated_region": 0.837463521236626
+  }
+ },
+ "Pattern : Homogeneous : NOS": {
+  "DS055": {
+   "n_pos": 17,
+   "n_neg": 174,
+   "image_auroc": 0.48309668695064234,
+   "ci": [
+    0.34608761556795264,
+    0.6396143075640219
+   ],
+   "generic_auroc": 0.45807978363759294,
+   "rank_of_76": 40,
+   "best_channel": "DS029",
+   "best_auroc": 0.6399594320486816,
+   "pointing": 0.6470588235294118,
+   "pointing_chance_in_annotated_region": 0.6936298200219625,
+   "n_pointing": 17,
+   "cell_auroc_in_annotated_region": 0.4298785156332381
+  }
+ },
+ "Pattern : Starburst": {
+  "DS023": {
+   "n_pos": 14,
+   "n_neg": 224,
+   "image_auroc": 0.9748086734693877,
+   "ci": [
+    0.9442629533047378,
+    0.9936051958962318
+   ],
+   "generic_auroc": 0.8431122448979592,
+   "rank_of_76": 2,
+   "best_channel": "DS024",
+   "best_auroc": 0.9786352040816326,
+   "pointing": 1.0,
+   "pointing_chance_in_annotated_region": 0.8606002192884376,
+   "n_pointing": 14,
+   "cell_auroc_in_annotated_region": 0.6934302130064897
+  }
+ },
+ "Regression structures : Peppering / Granularity": {
+  "DS038": {
+   "n_pos": 69,
+   "n_neg": 133,
+   "image_auroc": 0.6154516726599106,
+   "ci": [
+    0.5356415305948887,
+    0.6887007588906094
+   ],
+   "generic_auroc": 0.580363953361665,
+   "rank_of_76": 15,
+   "best_channel": "DS020",
+   "best_auroc": 0.7067124332570557,
+   "pointing": 0.4426229508196721,
+   "pointing_chance_in_annotated_region": 0.348796913300259,
+   "n_pointing": 61,
+   "cell_auroc_in_annotated_region": 0.5506035938342776
+  }
+ },
+ "Regression structures : Scarlike depigmentation": {
+  "DS051": {
+   "n_pos": 40,
+   "n_neg": 167,
+   "image_auroc": 0.6913922155688623,
+   "ci": [
+    0.593107594943351,
+    0.770508658008658
+   ],
+   "generic_auroc": 0.599251497005988,
+   "rank_of_76": 4,
+   "best_channel": "DS052",
+   "best_auroc": 0.7506736526946107,
+   "pointing": 0.5789473684210527,
+   "pointing_chance_in_annotated_region": 0.250488343566239,
+   "n_pointing": 38,
+   "cell_auroc_in_annotated_region": 0.5000295158044613
+  }
+ },
+ "Shiny white structures : Shiny white streaks": {
+  "DS006": {
+   "n_pos": 59,
+   "n_neg": 166,
+   "image_auroc": 0.5938840106187462,
+   "ci": [
+    0.5111881574621959,
+    0.6754445979611997
+   ],
+   "generic_auroc": 0.6661221155809679,
+   "rank_of_76": 38,
+   "best_channel": "DS053",
+   "best_auroc": 0.782928323463345,
+   "pointing": 0.3157894736842105,
+   "pointing_chance_in_annotated_region": 0.3197857923166268,
+   "n_pointing": 57,
+   "cell_auroc_in_annotated_region": 0.5441900477851564
+  }
+ },
+ "Structureless : Blotch irregular": {
+  "DS048": {
+   "n_pos": 54,
+   "n_neg": 150,
+   "image_auroc": 0.8629629629629629,
+   "ci": [
+    0.8048277243589744,
+    0.9163370541968054
+   ],
+   "generic_auroc": 0.7625925925925926,
+   "rank_of_76": 1,
+   "best_channel": "DS048",
+   "best_auroc": 0.8629629629629629,
+   "pointing": 0.8867924528301887,
+   "pointing_chance_in_annotated_region": 0.40707335647019577,
+   "n_pointing": 53,
+   "cell_auroc_in_annotated_region": 0.7404738737822228
+  }
+ },
+ "Structureless : Blotch regular": {
+  "DS048": {
+   "n_pos": 16,
+   "n_neg": 209,
+   "image_auroc": 0.7088815789473685,
+   "ci": [
+    0.6314311003431553,
+    0.7851428571428571
+   ],
+   "generic_auroc": 0.5744617224880383,
+   "rank_of_76": 15,
+   "best_channel": "DS055",
+   "best_auroc": 0.8130980861244019,
+   "pointing": 1.0,
+   "pointing_chance_in_annotated_region": 0.3996109083766141,
+   "n_pointing": 16,
+   "cell_auroc_in_annotated_region": 0.7962430258071257
+  }
+ },
+ "Structureless : Blue-whitish veil": {
+  "DS049": {
+   "n_pos": 55,
+   "n_neg": 155,
+   "image_auroc": 0.9462170087976539,
+   "ci": [
+    0.9173912080774681,
+    0.9764524608528903
+   ],
+   "generic_auroc": 0.7495601173020527,
+   "rank_of_76": 1,
+   "best_channel": "DS049",
+   "best_auroc": 0.9462170087976539,
+   "pointing": 0.9056603773584906,
+   "pointing_chance_in_annotated_region": 0.37059549966535976,
+   "n_pointing": 53,
+   "cell_auroc_in_annotated_region": 0.7266036478501876
+  }
+ },
+ "Structureless : Milky red areas": {
+  "DS050": {
+   "n_pos": 48,
+   "n_neg": 168,
+   "image_auroc": 0.7757936507936508,
+   "ci": [
+    0.7081321538293528,
+    0.8367301643942002
+   ],
+   "generic_auroc": 0.5746527777777778,
+   "rank_of_76": 8,
+   "best_channel": "DS053",
+   "best_auroc": 0.8888888888888888,
+   "pointing": 0.6170212765957447,
+   "pointing_chance_in_annotated_region": 0.42708539784607485,
+   "n_pointing": 47,
+   "cell_auroc_in_annotated_region": 0.6119025277211539
+  }
+ },
+ "Structureless : Structureless brown (tan)": {
+  "DS057": {
+   "n_pos": 79,
+   "n_neg": 110,
+   "image_auroc": 0.5758342922899885,
+   "ci": [
+    0.4968425532746768,
+    0.6528515431009697
+   ],
+   "generic_auroc": 0.3650172612197929,
+   "rank_of_76": 3,
+   "best_channel": "milia_like_cyst",
+   "best_auroc": 0.6324510932105869,
+   "pointing": 0.44285714285714284,
+   "pointing_chance_in_annotated_region": 0.3856235431852675,
+   "n_pointing": 70,
+   "cell_auroc_in_annotated_region": 0.46201545812725714
+  }
+ },
+ "Vessels : Comma": {
+  "DS067": {
+   "n_pos": 12,
+   "n_neg": 220,
+   "image_auroc": 0.8121212121212121,
+   "ci": [
+    0.6587582447447918,
+    0.9339990666482301
+   ],
+   "generic_auroc": 0.23446969696969697,
+   "rank_of_76": 8,
+   "best_channel": "DS060",
+   "best_auroc": 0.9390151515151515,
+   "pointing": 0.75,
+   "pointing_chance_in_annotated_region": 0.40575539843035374,
+   "n_pointing": 12,
+   "cell_auroc_in_annotated_region": 0.7582901279440243
+  }
+ },
+ "Vessels : Corkscrew": {
+  "DS066": {
+   "n_pos": 3,
+   "n_neg": 231,
+   "image_auroc": 0.9292929292929293,
+   "ci": [
+    0.8485828108672937,
+    0.9956681724073029
+   ],
+   "generic_auroc": 0.16305916305916307,
+   "rank_of_76": 3,
+   "best_channel": "DS068",
+   "best_auroc": 0.9956709956709957,
+   "pointing": 1.0,
+   "pointing_chance_in_annotated_region": 0.11734693877551021,
+   "n_pointing": 1,
+   "cell_auroc_in_annotated_region": 0.6430938329091992
+  }
+ },
+ "Vessels : Dotted": {
+  "DS060": {
+   "n_pos": 38,
+   "n_neg": 182,
+   "image_auroc": 0.8383458646616542,
+   "ci": [
+    0.7820417132216014,
+    0.897462981149076
+   ],
+   "generic_auroc": 0.3956043956043956,
+   "rank_of_76": 1,
+   "best_channel": "DS060",
+   "best_auroc": 0.8383458646616542,
+   "pointing": 0.6285714285714286,
+   "pointing_chance_in_annotated_region": 0.42687337257172864,
+   "n_pointing": 35,
+   "cell_auroc_in_annotated_region": 0.5863455375170196
+  }
+ },
+ "Vessels : Linear irregular": {
+  "DS065": {
+   "n_pos": 39,
+   "n_neg": 186,
+   "image_auroc": 0.8061069754618142,
+   "ci": [
+    0.7229721499748777,
+    0.8848590629518609
+   ],
+   "generic_auroc": 0.3639371381306865,
+   "rank_of_76": 7,
+   "best_channel": "DS068",
+   "best_auroc": 0.8850289495450786,
+   "pointing": 0.75,
+   "pointing_chance_in_annotated_region": 0.3384310603040316,
+   "n_pointing": 36,
+   "cell_auroc_in_annotated_region": 0.6153457051148207
+  }
+ },
+ "Vessels : Polymorphous": {
+  "DS069": {
+   "n_pos": 42,
+   "n_neg": 187,
+   "image_auroc": 0.8744588744588745,
+   "ci": [
+    0.811290217955371,
+    0.9333332842372897
+   ],
+   "generic_auroc": 0.4541634835752483,
+   "rank_of_76": 3,
+   "best_channel": "DS068",
+   "best_auroc": 0.8989050165520753,
+   "pointing": 0.926829268292683,
+   "pointing_chance_in_annotated_region": 0.5729602933822087,
+   "n_pointing": 41,
+   "cell_auroc_in_annotated_region": 0.6846403363886815
+  }
+ }
+}

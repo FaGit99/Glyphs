@@ -1,7 +1,7 @@
 """Auswertung OHNE Neutraining: hybrid.pt auf den 248 EASY-Bildern (Liopyris et al. 2023, ISIC-Collection 166).
 
   python easy_eval.py masks   # Reader-Masken -> Abdeckung je Ansicht/Merkmal (cache/easy_gt.npz)
-  python easy_eval.py pred    # Vorhersagen (CPU) -> cache/easy_pred.npz
+  python easy_eval.py pred    # Vorhersagen (GPU/CPU, EASY_DEV) -> cache/easy_pred.npz
   python easy_eval.py eval    # Kennzahlen -> models/easy_eval.json
 
 Geometrie wie prep_real.py: kurze Seite -> 450 px, mittleres Quadrat, 4 Eck-Tiles + Mitte + Gesamtansicht (je 224 px).
@@ -104,15 +104,21 @@ def do_masks(limit=150):
     print("easy_gt.npz geschrieben")
 
 
+TAG = os.environ.get("EASY_TAG", "")   # z. B. "_gpu" -> getrennte Ausgabedateien
+TLIM = float(os.environ.get("EASY_TLIM", "1e9"))
+
+
 def do_pred():
     import torch
-    src = open("dense.py").read().replace('dev = "cuda"', 'dev = "cpu"'); D = type(sys)("dense_cpu"); exec(src, D.__dict__)
-    torch.set_num_threads(2)
+    DEV = os.environ.get("EASY_DEV", "cuda" if torch.cuda.is_available() else "cpu")
+    src = open("dense.py").read().replace('dev = "cuda"', f'dev = "{DEV}"'); D = type(sys)("dense_dev"); exec(src, D.__dict__)
+    if DEV == "cpu":
+        torch.set_num_threads(2)
     ck = torch.load("models/hybrid.pt", map_location="cpu", weights_only=False)
-    m = D.DenseViT(ck["n_out"], pretrained=False); m.load_state_dict(ck["state"]); m.eval()
+    m = D.DenseViT(ck["n_out"], pretrained=False); m.load_state_dict(ck["state"]); m.to(DEV).eval()
     ids = [str(i) for i in ck["ids"]]; names = [l.strip() for l in open(E + "image_list.txt") if l.strip()]
     mean = np.array([0.485, 0.456, 0.406], np.float32) * 255; std = np.array([0.229, 0.224, 0.225], np.float32) * 255
-    part = "cache/easy_pred_partial.npz"; t = time.time()
+    part = f"cache/easy_pred{TAG}_partial.npz"; t = time.time()
     if os.path.exists(part):
         z = np.load(part); out, ok = z["pm"], z["ok"]
     else:
@@ -120,18 +126,18 @@ def do_pred():
     for i, n in enumerate(names):
         if ok[i]:
             continue
-        if time.time() - t > 140:
+        if time.time() - t > TLIM:
             break
         img = cv2.imread(f"{E}images/{n}.jpg")
         img = cv2.cvtColor(resize_min450(img, cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
         x = (np.stack(views(img, cv2.INTER_AREA)).astype(np.float32) - mean) / std
         with torch.no_grad():
-            _, pm = m(torch.from_numpy(x).permute(0, 3, 1, 2))
-        out[i] = torch.sigmoid(pm).numpy().astype(np.float16); ok[i] = True
+            _, pm = m(torch.from_numpy(x).permute(0, 3, 1, 2).to(DEV))
+        out[i] = torch.sigmoid(pm).float().cpu().numpy().astype(np.float16); ok[i] = True
     np.savez(part, pm=out, ok=ok)
     print(int(ok.sum()), "/", len(names), f"nach {time.time() - t:.0f}s", flush=True)
     if ok.all():
-        np.savez("cache/easy_pred.npz", pm=out, ids=np.array(ids)); print("easy_pred.npz geschrieben")
+        np.savez(f"cache/easy_pred{TAG}.npz", pm=out, ids=np.array(ids)); print(f"easy_pred{TAG}.npz geschrieben")
 
 
 def auc(y, s):
@@ -158,7 +164,7 @@ def boot(y, s, n=300):
 
 
 def do_eval():
-    g = np.load("cache/easy_gt.npz"); p = np.load("cache/easy_pred.npz")
+    g = np.load("cache/easy_gt.npz"); p = np.load(f"cache/easy_pred{TAG}.npz")
     cov, nrd, feats = g["cov"], g["nrd"], [str(f) for f in g["feats"]]; pm = p["pm"].astype(np.float32); ids = [str(i) for i in p["ids"]]
     chan = ids + ATTRS; K = len(ids)
     img_score = pm.max((1, 3, 4))                       # [N, C] max ueber Ansichten und Zellen
@@ -194,7 +200,7 @@ def do_eval():
             res.setdefault(f, {})[cname] = dict(n_pos=int(pos.sum()), n_neg=int(neg.sum()), image_auroc=a_, ci=ci, generic_auroc=gen, rank_of_76=rank,
                                                 best_channel=best, best_auroc=float(allauc.max()), pointing=float(np.mean(hits)),
                                                 pointing_chance_in_annotated_region=float(np.mean(ch_in)), n_pointing=len(hits), cell_auroc_in_annotated_region=cell_auc)
-    json.dump(res, open("models/easy_eval.json", "w"), indent=1, ensure_ascii=False)
+    json.dump(res, open(f"models/easy_eval{TAG}.json", "w"), indent=1, ensure_ascii=False)
 
 
 if __name__ == "__main__":

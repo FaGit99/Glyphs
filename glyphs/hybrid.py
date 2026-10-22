@@ -7,7 +7,7 @@ mapped IDs, real = ISIC Task 2 masks). Real images are masked out of the loss fo
   python hybrid.py train real_only [epochs]  # real train split only, 5 outputs
   python hybrid.py eval                      # thresholds on the calibration split, metrics on the test split
 """
-import csv, json, sys, time
+import csv, json, os, sys, time
 import cv2, numpy as np, torch, torch.nn.functional as F
 from scipy.ndimage import binary_dilation
 from sklearn.linear_model import LogisticRegression
@@ -133,7 +133,7 @@ def evaluate():
     arms = {}
     m, _ = load_model("models/dense_v1.pt"); arms["synth_only"] = ("ids", m)
     m, _ = load_model("models/real_only.pt"); arms["real_only"] = ("attr5", m)
-    m, _ = load_model("models/hybrid.pt"); arms["hybrid"] = ("attr_ext", m)
+    m, _ = load_model(os.environ.get("HYB_CKPT", "models/hybrid.pt")); arms["hybrid"] = ("attr_ext", m)
 
     def attr_maps(arm, tiles):
         kind, model = arms[arm]
@@ -219,9 +219,9 @@ def evaluate():
                 t = best_thr(g, pm[:, j].ravel()); p = pm[:, j].ravel() >= t; ious.append((p & g).sum() / max((p | g).sum(), 1))
         res[arm] = float(np.mean(ious)); print(f"synthetic val, 71-ID channels, {arm}: mean patch IoU {res[arm]:.3f} over {len(ious)} IDs")
     out["synthetic_val_iou"] = res
-    json.dump(out, open("models/hybrid_eval.json", "w"), indent=1)
+    json.dump(out, open(f"models/hybrid_eval{os.environ.get('HYB_TAG', '')}.json", "w"), indent=1)
     cal = {a: dict(thr=out[a]["hybrid"]["thr"], platt=out[a]["hybrid"]["platt"]) for a in ATTRS}
-    json.dump(cal, open("models/hybrid_calibration.json", "w"), indent=1)
+    json.dump(cal, open(f"models/hybrid_calibration{os.environ.get('HYB_TAG', '')}.json", "w"), indent=1)
 
     # overlays on the test split: GT | synthetic-only | hybrid (thresholded at the calibrated value)
     rng = np.random.default_rng(0); rows = []
@@ -246,7 +246,7 @@ def evaluate():
                 cv2.putText(c, title, (4, 14), cv2.FONT_HERSHEY_SIMPLEX, .45, (255, 255, 255), 1); cells.append(c)
             cap = np.full((20, 768, 3), 255, np.uint8); cv2.putText(cap, f"{a}  (yellow = region above the calibrated threshold, white = lesion)", (3, 14), cv2.FONT_HERSHEY_SIMPLEX, .42, (0, 0, 0), 1)
             rows.append(np.vstack([cap, np.hstack(cells)]))
-    cv2.imwrite("out/hybrid_examples.png", np.vstack(rows)); print("wrote out/hybrid_examples.png, models/hybrid_eval.json, models/hybrid_calibration.json")
+    cv2.imwrite(f"out/hybrid_examples{os.environ.get('HYB_TAG', '')}.png", np.vstack(rows)); print("wrote out/hybrid_examples.png, models/hybrid_eval.json, models/hybrid_calibration.json")
 
 
 if __name__ == "__main__":
