@@ -1,0 +1,5 @@
+# Generated reports (HTML with embedded images) are outputs, not source code:
+# keep them out of GitHub's language statistics.
+glyphs/out/** linguist-generated
+glyphs/frozen_V2/out_cases/** linguist-generated
+glyphs/frozen_V2/out_twopath/** linguist-generated
